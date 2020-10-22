@@ -43,9 +43,6 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- disqus
-- analytics
-- search console
 - critical path css
 - author description
 - horario

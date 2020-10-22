@@ -23,7 +23,6 @@ $danger: $rojo;
 $font-family-sans-serif: 'Din', sans-serif;
 $headings-font-family: 'Brandon', sans-serif;
 $leads-font-family: 'Alegreya', serif;
-$cursive-font-family: 'Nothing You Could Do', cursive;
 
 // Other
 $enable-rounded: true;
@@ -31,6 +30,7 @@ $border-radius: 0.5rem;
 $btn-type-pill: true;
 
 @import 'bootstrap/bootstrap';
+@import 'fontawesome-v5.10.0';
 @import 'memoirs';
 @import 'smooth-scroll';
 @import 'cookies-message';
