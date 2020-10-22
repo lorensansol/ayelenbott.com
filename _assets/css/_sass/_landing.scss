@@ -1,0 +1,134 @@
+// Navbar
+.navbar {
+    max-height: 100vh;
+    overflow: scroll;
+    transition: all .3s;
+    &.navbar-transparent {
+        background-color: transparent !important;
+    }
+    &.navbar-dark .navbar-nav .nav-link {
+        color: $white;
+        transition: all .3s;
+        .fa {
+            transition: all 0s;
+        }
+        &.active {
+            color: $primary;
+        }
+        &.btn {
+            line-height: 1.5rem;
+        }
+    }
+    &.top {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        // background-color: transparent !important;
+        background-color: rgba(56, 47, 57, .75) !important;
+        // @media (min-width: 992px) {
+             .nav-link {
+                 font-size: 1.25em;
+             }
+        // }
+    }
+    .navbar-toggler {
+        color: $white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 100rem;
+        outline: none;
+        .fa:before {
+            content: '\f00d';
+        }
+    }
+    &.navbar-transparent {
+        .navbar-toggler {
+            .fa:before {
+                content: '\f0c9';
+            }
+        }
+    }
+    .navbar-collapse {
+        overflow: hidden;
+        max-height: 200vh;
+        transition: max-height .3s;
+        &.collapse:not(.show) {
+            @media (max-width: 991px) {
+                display: block;
+                max-height: 0;
+            }
+        }
+    }
+}
+
+// Header
+header#aye {
+    min-height: 100vh;
+}
+header#aye, #contacto {
+    background-image: url(/assets/img/servicios/fondo.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
+header#aye .lead {
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+// Sections
+section {
+    padding: 6rem 0;
+}
+
+// Sobre
+#sobre {
+    .badge {
+        font-size: 1rem;
+    }
+}
+
+// Modal
+[data-toggle='modal'] {
+    cursor: pointer;
+}
+.modal {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba($secondary, .5);
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s, height .3s step-end;
+    .modal-content {
+        border-radius: $border-radius;
+        transform: translateY(50vh);
+        transition: transform .3s;
+    }
+    &.show {
+        opacity: 1;
+        height: 100%;
+        transition: opacity .3s, height 0s step-end;
+        .modal-content {
+            transform: translateY(0);
+        }
+    }
+    button.close {
+        float: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+// List group item
+.list-group-item {
+    text-indent: -1.5rem;
+    padding-left: 2.75rem;
+}
+
+// Blog
+.blog-grid-container {
+    text-align: initial;
+}

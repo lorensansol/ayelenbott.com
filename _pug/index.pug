@@ -1,0 +1,25 @@
+.
+  ---
+  layout: compress
+  ---
+  
+doctype html
+html(lang="es")
+  .
+    {% include head.html %}
+    {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+  body#top
+    include includes/nav.pug
+    include includes/header.pug
+    main.text-center
+      include includes/sobre.pug
+      include includes/que.pug
+      include includes/servicios.pug
+      include includes/proyectos.pug
+      include includes/blog.pug
+      include includes/contacto.pug
+  .
+    {% include footer.html %}
+    {% include btn-callnow.html %}
+    {% include schema.html %}
+  .d-md-none.pb-4.bg-white

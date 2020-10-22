@@ -1,0 +1,76 @@
+<head>
+
+    {% if jekyll.environment == "production" %}
+        {% assign assetsdir = '/assets' %}
+    {% else %}
+        {% assign assetsdir = '/_assets' %}
+    {% endif %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% if paginator.page > 1 %}
+        <title>Página {{paginator.page}} de {{paginator.total_pages}} | {{ site.title }}</title>
+    {% else %}
+        <title>{{ page.title }}</title>
+    {% endif %}
+
+    {% seo title=false %}
+
+    {% if page.sitemap == false %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% if site.critical-path-css %}
+        {% include critical-path-css.html %}
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ site.baseurl }}{{ assetsdir }}/css/styles.css" media="print" onload="this.media='all'">
+
+    {% if jekyll.environment == "production" %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,700&family=Nothing+You+Could+Do&family=Permanent+Marker&display=swap" media="print" onload="this.media='all'">
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" media="print" onload="this.media='all'" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" media="print" onload="this.media='all'"> -->
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/solid.css" media="print" onload="this.media='all'"> -->
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/brands.css" media="print" onload="this.media='all'"> -->
+    {% else %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fonts.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fontawesome-v5.10.0.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ site.baseurl }}/_assets/css/prism.css" media="print" onload="this.media='all'">
+        <script src="{{ site.baseurl }}/_assets/js/prism.js" assync></script>
+    {% endif %}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ assetsdir }}/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ assetsdir }}/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ assetsdir }}/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ assetsdir }}/img/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ assetsdir }}/img/favicon/apple-touch-icon.png">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml">
+
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+        <!-- change your GA id in _config.yml -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{site.google_analytics}}');
+        </script>
+    {% endif %}
+
+    <!-- Adsense if true from _config.yml (change your pub id) -->
+    {% if site.google_adsense %}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "{{site.google_adsense}}",
+                enable_page_level_ads: true
+            });
+        </script>
+    {% endif %}
+
+</head>

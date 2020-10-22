@@ -1,0 +1,17 @@
+<!-- Post, Page Content
+================================================== -->
+<div class="article-post">
+  <!-- Toc if any -->
+  {% if page.toc %}
+    {% if page.beforetoc %}
+      <p><em>{{page.beforetoc}}</em></p>
+    {% endif %}
+    <div class="toc mt-4 mb-4">
+      <p class="lead">Índice</p>
+      {% include toc.html html=content %}
+    </div>
+  {% endif %}
+  <!-- End Toc -->
+  <!-- Change src attribute in (markdown) content for lazyload -->
+  {{ content | replace: ' src=', ' class="rounded" data-src=' }}
+</div>

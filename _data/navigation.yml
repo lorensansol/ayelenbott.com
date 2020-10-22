@@ -1,0 +1,22 @@
+- name: Inicio
+  link: /
+- name: Blog
+  link: /blog/
+- name: Categorías
+  link: /categorias
+  onclick: true
+- name: Etiquetas
+  link: /etiquetas
+  onclick: true
+# - name: Autores
+#   link: /autores
+#   onclick: true
+- name: Sobre
+  link: /#sobre
+  onclick: true
+- name: Contacto
+  link: /#contacto
+  onclick: true
+- name: Servicios
+  link: /servicios
+  onclick: true

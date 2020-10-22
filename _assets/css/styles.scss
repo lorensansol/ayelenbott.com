@@ -1,0 +1,43 @@
+---
+---
+
+// Colors
+$dorado: #CA9334;
+$azulado: #382F39;
+$negro: #404041;
+$rojo: #EF4843;
+
+$primary: $dorado;
+  $percentage-darken-primary: 0%;
+$secondary: $azulado;
+$dark: $negro;
+// $black: $negro;
+$danger: $rojo;
+
+// Fonts
+// font-family: 'Alegreya', serif;
+// font-family: 'Brandon', sans-serif;
+// font-family: 'Din', sans-serif;
+// font-family: 'Nothing You Could Do', cursive;
+// font-family: 'Permanent Marker', cursive;
+$font-family-sans-serif: 'Din', sans-serif;
+$headings-font-family: 'Brandon', sans-serif;
+$leads-font-family: 'Alegreya', serif;
+$cursive-font-family: 'Nothing You Could Do', cursive;
+
+// Other
+$enable-rounded: true;
+$border-radius: 0.5rem;
+$btn-type-pill: true;
+
+@import 'bootstrap/bootstrap';
+@import 'memoirs';
+@import 'smooth-scroll';
+@import 'cookies-message';
+@import 'scroll-show';
+@import 'btn-up';
+@import 'btn-callnow';
+@import 'lazy-load';
+@import 'custom';
+@import 'landing';
+@import 'logo-animations';

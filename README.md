@@ -1,12 +1,6 @@
-# seacomoseo.com
+# ayelenbott.com
 
-```html
-<sea>
-  como
-</seo>
-````
-
-[https://lorensansol.github.io/seacomoseo.com/](https://lorensansol.github.io/seacomoseo.com/)
+[![Ayelén Bott(/assets/img/logo.svg)]](https://ayelenbott.com/)
 
 Instalar con terminal desde carpeta root:
 
@@ -25,6 +19,12 @@ bundle exec jekyll serve --watch --config _config.yml,_config_dev.yml
 JEKYLL_ENV=production bundle exec jekyll serve --watch
 ```
 
+Precompilar pug
+
+```
+pug --out _layouts/ _pug/*.pug --watch
+```
+
 Subir a producción previo minificar y purgar css + minificar js (no olvidar descomentar site.critical-path-css y comentar site.include en \_config.yml):
 
 ```bash
@@ -41,13 +41,6 @@ terser _site/_assets/js/lunr.js --comments false --output assets/js/lunr.js
 git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 ```
 
-Experimental
-
-```bash
-# precompilar servicios.pug
-pug --out _layouts/ _pug/*.pug --watch
-```
-
 ## FALTA
 
 - disqus
@@ -59,11 +52,8 @@ pug --out _layouts/ _pug/*.pug --watch
 - seleccionar imágenes de capacitación, copiar en _assets y borrar no seleccionadas
 - featured image
 
-- Quitar acentos en tag links de toc
-- Comprobar Carga diferida de css
-  - critical diferente según pagetype
-  - Comprobar smooth scroll safari (si con critical no funciona bien, usar js)
 
+- Quitar acentos en tag links de toc
 - CLI / Gulp padre
   - critical
   - img
@@ -71,15 +61,4 @@ pug --out _layouts/ _pug/*.pug --watch
   - Eliminar comentarios #! de css (purgecss remove special comments)
   - Eliminar comentarios mapping
 
-- Actualizar posts de rejilla y presentación y página sobre y ejemplo rejilla
-- Borrar posts de ejemplo y borradores + assets
-- Actualizar página de diseño
-  - data-showup
-  - Contenido general
-  - Diseño
-    - Proceso
-    - Ventajas
-    - Reseñas
-    - Contacto
-  - Brocha en footer
 - Marcado de datos estructurados

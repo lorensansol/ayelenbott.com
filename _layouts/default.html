@@ -1,0 +1,56 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="es">
+
+{% include head.html %}
+
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+
+<body id="top" class="layout-default">
+
+<div class="d-flex flex-column">
+    <!-- Before div flexbox and after div order-2 for put the menú first -->
+
+    <div class="site-content {% if page.url == '/blog/' %}firstpage{% endif %} order-2">
+
+        <div class="container">
+
+            <!-- Site Logo/Name
+            ================================================== -->
+
+            <a class="navbar-brand w-100 mx-auto d-block" href="{{ site.baseurl }}/">
+                <img class="mt-0 mb-4" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" width="250" height="100">
+            </a>
+
+            {% if page.url == '/blog/' or paginator.page > 1 %}
+                <h1 class="sitetag mx-auto">
+                    {% if paginator.page > 1 %}
+                        Página {{paginator.page}} de {{paginator.total_pages}}
+                    {% else %}
+                        Blog sobre {{ site.description }}
+                    {% endif %}
+                </h1>
+            {% endif %}
+
+            <!-- Content
+            ================================================== -->
+            <div class="main-content">
+                {{ content }}
+            </div>
+            
+            {% include newsletter.html %}
+
+        </div>
+
+    </div> <!-- /.site-content -->
+
+    {% include menu.html %}
+
+</div>
+
+{% include footer.html %}
+
+</body>
+</html>

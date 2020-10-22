@@ -1,0 +1,46 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+
+<div class="blog-grid-item" onclick="location.href='{{ site.baseurl }}{{ post.url }}'">
+    <div class="card h-100 w-100 overflow-hidden">
+        <div class="maxthumb">
+            {% include featured-image.html image=post.image %}
+        </div>
+        <div class="card-body">
+            <small class="post-date badge badge-primary badge-pill ml-1 my-1">
+                {% include date-spa.html date=post.date %}
+            </small>
+            <h2 class="card-title">
+                <a class="text-secondary" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            {% if page.url != '/' %}
+                <p class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
+            {% endif %}
+        </div>
+        <!-- <div class="card-footer bg-white">
+            <div class="wrapfooter">
+                {% if post.author %}
+                    <span class="meta-footer-thumb">
+                        {% if author.avatar %}
+                            {% if jekyll.environment == "production" %}
+                                <img class="author-thumb" width="40" height="40" data-src="https://images.weserv.nl/?url={{ site.url }}{{ site.baseurl }}{{ author.avatar }}&w=40&q=65" alt="{{ author.name }}">
+                            {% else %}
+                                <img class="author-thumb" width="40" height="40" data-src="{{ site.baseurl }}{{ author.avatar }}" alt="{{ author.name }}">
+                            {% endif %}
+                        {% else %}
+                            <img class="author-thumb" data-src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d=mm&r=x" alt="{{ author.name }}">
+                        {% endif %}
+                    </span>
+                    <span class="author-meta">
+                        <span class="post-name font-weight-bold">{{ author.name }}</span>
+                {% endif %}
+                    <span class="post-date">
+                        {% include date-spa.html date=post.date %}
+                    </span>
+                </span>
+                <div class="clearfix"></div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- end post -->

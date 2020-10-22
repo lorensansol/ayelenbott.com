@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="sitetag mx-auto">
+  <h1 class="posttitle">{{ page.title }}</h1>
+</div>
+
+<div class="h3 d-flex flex-wrap justify-content-center align-items-center mt-5">
+  {% for category in site.categories %}
+    <a class="smoothscroll btn btn-primary text-capitalize m-1" href="#{{ category[0] | slugify: 'latin' }}">{{ category[0] }}</a>
+  {% endfor %}
+</div>
+
+{% for category in site.categories %}
+  <h2 class="mt-5 mb-neg-30" id="{{ category[0] | slugify: 'latin' }}">
+    <span class="text-capitalize badge badge-primary text-small">{{ category[0] }}</span>
+  </h2>
+  <div class="blog-grid-container">
+    {% assign pages_list = category[1] %}
+    {% for post in pages_list %}
+      {% if post.title != null %}
+        {% if group == null or group == post.group %}
+          {% include postbox.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </div>
+{% endfor %}

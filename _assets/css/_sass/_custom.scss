@@ -1,0 +1,130 @@
+// Headers weight
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+}
+
+// Headers blog colors
+.layout-default {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+    .posttitle, .sitetag {
+        color: $secondary;
+    }
+}
+
+// Leads (subtitles)
+.lead {
+    font-family: $leads-font-family;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+// Font buttons
+.btn:not(:disabled):not(.disabled) {
+    // font-family: 'Brandon', sans-serif;
+    line-height: 1.625rem;
+    height: 2.375rem;
+}
+.btn:not(:disabled):not(.disabled).btn-lg {
+    line-height: 2rem;
+    height: 3rem;
+}
+
+// Contrast text color primary
+.btn-primary, .btn-secondary, .btn-dark,
+.bg-primary, .bg-secondary, .bg-dark {
+    color: $light;
+}
+
+// Text logo size responsive
+@media (max-width: 575px) {
+    .sm-h4 {
+        font-size: 1.5rem;
+    }
+}
+
+// Color of onclick links and primary text
+.text-primary,
+span[onclick] {
+    transition: all .3s ease-in-out;
+    color: darken($primary, $percentage-darken-primary) !important;
+}
+a:not(.btn):hover,
+a.text-primary:not(.btn):hover,
+span[onclick]:not(.btn):hover {
+    color: darken($primary, $percentage-darken-primary) !important;
+    text-decoration: none;
+}
+
+// Buttons, badges and inputs rounded-circular
+@if $btn-type-pill {
+    .btn,
+    .badge,
+    .form-control {
+        border-radius: 1.5rem;
+    }
+}
+
+// Code > pre rounded
+.article-post code[class*="language-"],
+.article-post pre[class*="language-"] {
+    border-radius: $border-radius;
+    overflow: hidden;
+}
+
+// Correct min-width in btn + badge
+.related-posts.btn,
+.btn-up,
+.nav-link.btn {
+    min-width: inherit !important;
+}
+
+// Badge avatar
+.badge .author-thumb {
+    width: 1em;
+    border-radius: 50%;
+}
+
+// Correct ofuscate badge of categories and tags
+.badge[onclick],
+.badge[onclick]:hover {
+    color: #000 !important;
+}
+
+// Logo and h1 of inicio
+.navbar-brand,
+.sitetag {
+    max-width: 700px;
+}
+
+// Correct show / hide search result
+#lunrsearchresults {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s linear, visibility .5s step-end;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .5s linear, visibility 0s step-start;
+    }
+}
+
+// Correct featured-image dimensions
+.featured-image {
+    width: auto !important;
+}
+
+// Correct the shadows
+.shadow {
+    box-shadow: 0 1px 0 1px rgba(0,0,0,0.07) !important
+}
+
+// Correct badge primary color
+.related-posts .btn,
+.smoothscroll.btn,
+.badge-primary {
+    color: $white !important;
+    min-width: auto;
+}

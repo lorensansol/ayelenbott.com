@@ -1,0 +1,28 @@
+.btn-up {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: all .5s;
+  z-index: 10;
+  width: 42px !important;
+  height: 42px !important;
+  font-size: 1.5rem;
+  padding: .5rem 0;
+  @media (min-width: 768px) {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.75rem;
+    padding: .6rem 0;
+  }
+}
+.btn-up.btn-up-hide {
+  opacity: 0;
+  bottom: -4em;
+}
+.btn-up-aux {
+  position: absolute;
+  top: 100vh;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

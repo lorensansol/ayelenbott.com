@@ -1,0 +1,123 @@
+# Site
+name: 'Ayelén Bott'
+title: 'Ayelén Bott'
+description: 'Matemáticas, Estadística y Finazas'
+url: https://ayelenbott.com
+baseurl: ''
+logo: /assets/img/logo.svg
+favicon: /favico.ico
+google_analytics: G-DVLW394645
+google_site_verification: 'kOIAxDc84xeslw4EgwFjG_LDka0qLKXFKz2ZrJtO--w'
+# google_adsense: "ca-pub-xxxxxxxxxxxxxxxx"
+# mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+email: '&#x61;&#x79;&#x65;&#x6C;&#x65;&#x6E;&#x62;&#x6F;&#x74;&#x74;&#x61;&#x72;&#x69;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;'
+disqus: 'ayelenbott'
+lang: es
+permalink: /:title
+authorbox: true
+author-links: true
+search: true
+lazy-load-comments: false # if not, comments load when clic
+critical-path-css: false
+
+# Authors
+authors:
+  ayelen:
+    name: Ayelén Bott
+    avatar: /assets/img/servicios/ayelen.jpg
+    # gravatar: a48d43c9530f50721162853c0b68aebc
+    # email: '&#x61;&#x79;&#x65;&#x6C;&#x65;&#x6E;&#x62;&#x6F;&#x74;&#x74;&#x61;&#x72;&#x69;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;'
+    web: /#sobre
+    # twitter: https://twitter.com/ayelenbottari
+    description: 'Ratona de biblioteca. Profesora de clases particulares de Matemáticas, Estadística y Finanzas desde 2010. También estudié Ing. Civil y actualmente estoy formándome como Licenciada en Cs. de la Educación.'
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/categorias#:name'
+
+# Pagination
+paginate: 6
+paginate_path: /blog/page:num/
+
+# Drafts and pages like collections
+collections:
+  drafts:
+    output: true
+  pages:
+    output: true
+    permalink: /:name
+
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: all
+  ignore:
+    envs: [development]
+
+# Exclude
+exclude: [README.md, Gemfile, Gemfile.lock, _pug, google7467d923cbb3eb4c.html]
+
+# Defaults values
+defaults:
+  - # All posts
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: post
+      author: ayelen
+      toc: true
+      description: false
+      comments: true
+      excerpt_separator: <!--more-->
+  - # All drafts
+    scope:
+      path: ''
+      type: 'drafts'
+    values:
+      layout: post
+      author: ayelen
+      toc: true
+      description: false
+      comments: false
+      sitemap: false
+      excerpt_separator: <!--more-->
+  - # All pages
+    scope:
+      path: ''
+      type: 'pages'
+    values:
+      layout: page
+      toc: false
+      description: false
+      comments: false
+      sitemap: false
+      excerpt_separator: <!--more-->
+  - # Neither noindex nor sitemap in pages
+    scope:
+      path: 'blog/page'
+    values:
+      sitemap: false
+
+# Other
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+  transliterated_header_ids: false
+
+# DEVELOPMENT CONFIG IN _config_dev.yml

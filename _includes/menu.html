@@ -1,0 +1,27 @@
+<div class="sidebar"></div>   
+<div class="nav-icon">
+    <div class="hamburger-bar"></div>
+</div>
+<div id="blackover-nav" class="blackover"></div>
+<nav id="menu">
+    <ul>
+        <h3>Navegación</h3>
+        {% for item in site.data.navigation %}
+            <li>
+                <a
+                    {% if item.onclick %}
+                        onclick="location.href='{{ site.baseurl }}{{ item.link }}'"
+                    {% else %}
+                        href="{{ site.baseurl }}{{ item.link }}"
+                    {% endif %}
+                    {% if page.url == item.link %}
+                        class="text-primary"
+                    {% endif %}
+                >
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>   
+</nav>
+{% include search-lunr.html %}

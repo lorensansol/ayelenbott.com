@@ -1,0 +1,156 @@
+section#servicios.bg-primary
+  .container
+    .row
+      .col-md-4.order-md-2
+        .d-table.m-auto.text-left
+          h2.h1.text-secondary.text-uppercase Servicios
+          .lead.m-0
+            p
+              i.fa.fa-fw.mr-1
+              |  Aprendé
+            p
+              i.fa.fa-fw.text-secondary.mr-1.fa-square-root-alt
+              |  Matemáticas
+            p
+              i.fa.fa-fw.text-secondary.mr-1.fa-chart-line
+              |  Estadística
+            p
+              i.fa.fa-fw.text-secondary.mr-1.fa-chart-pie
+              |  Finanzas
+          //- a.btn.btn-lg.btn-secondary.w-100(href='/servicios') ✚ Más
+      .col-md-4.order-md-1.mt-5.mt-md-0
+        img.img-fluid(data-src='/assets/img/servicios/formacion.svg' alt='formacion universitaria' width='983' height='803')
+        h3.mt-3 Formación Universitaria
+        //- a.btn.btn-lg.btn-secondary(href='/servicios#universitaria') ✚ Más
+        a.btn.btn-lg.btn-secondary(data-toggle='modal' href='#formacion-universitaria') ✚ Más
+        .modal#formacion-universitaria(tabindex='-1' role='dialog' aria-hidden='true')
+          .modal-dialog.modal-lg(role='document')
+            .modal-content
+              .modal-body.py-5.px-lg-5.text-muted
+                button.close(type='button' data-dismiss='modal' aria-label='Cerrar') ✖
+                p.h2.text-uppercase.text-secondary Formación Universitaria
+                p.mb-5 Querid@ alumn@, de mi mano podrás aprender e incorporar el conocimiento que necesitás para aprobar tus exámenes y lograr tus metas universitarias. Lo haremos:
+                .row
+                  .col-lg-6.text-left.text-lg-right
+                    .d-flex.mb-3.justify-content-lg-end
+                      .text-secondary.mx-2.order-lg-2
+                        i.fa.fa-fw.fa-3x.fa-clock
+                      div
+                        h4.lead.text-primary.mb-2 Rápido
+                        p.mb-0 En pocas horas
+                    .d-flex.mb-3.justify-content-lg-end
+                      .text-secondary.mx-2.order-lg-2
+                        i.fa.fa-fw.fa-3x.fa-check
+                      div
+                        h4.lead.text-primary.mb-2 Simple
+                        p.mb-0 De manera clara y metódica
+                    .d-flex.mb-3.justify-content-lg-end
+                      .text-secondary.mx-2.order-lg-2
+                        i.fa.fa-fw.fa-3x.fa-wallet
+                      div
+                        h4.lead.text-primary.mb-2 Económico
+                        p.mb-0 Acorde a tu economía universitaria
+                  .col-lg-6.text-left
+                    .d-flex.mb-3
+                      .text-secondary.mx-2
+                        i.fa.fa-fw.fa-3x.fa-trophy
+                      div
+                        h4.lead.text-primary.mb-2 Efectivo
+                        p.mb-0 90% de aprobados en sus exámenes con buenas y muy buenas calificaciones
+                    .d-flex.mb-3
+                      .text-secondary.mx-2
+                        i.fa.fa-fw.fa-3x.fa-times
+                      div
+                        h4.lead.text-primary.mb-2 Sin requisitos
+                        p.mb-0 Sin requisitos previos: ¡No necesitás saber el contenido con antelación!
+                h4.h3.text-uppercase.text-secondary.mt-5.mb-4 Modalidades
+                .row
+                  .col-sm-6.mb-4
+                    .d-inline-block.rounded-circle.bg-secondary.p-4
+                      i.fa.fa-fw.fa-3x.fa-chalkboard-teacher
+                    h5.h4.lead.text-primary.mt-3.mb-2 Clases en vivo
+                    p Se caracterizan por ser:
+                    ul.list-group.list-group-flush.text-left.d-table.mx-auto
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  Individuales o en grupos reducidos
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  De 1 hora de duración
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  Con el material de estudio incluído
+                  .col-sm-6.mb-4
+                    .d-inline-block.rounded-circle.bg-secondary.p-4
+                      i.fa.fa-fw.fa-3x.fa-desktop
+                    h5.h4.lead.text-primary.mt-3.mb-2 Entrenamientos virtuales
+                    p Cada entrenamiento contiene:
+                    ul.list-group.list-group-flush.text-left.d-table.mx-auto
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  Un video explicativo del tema
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  Un archivo imprimible con el contenido escrito y ejercitación resuelta
+                      li.list-group-item
+                        i.fa.fa-fw.fa-check.text-primary
+                        |  Un test de Autoevaluación
+                p Puedo asesorarte sobre la opción de aprendizaje óptima a tomar, acorde a tu objetivo 
+                p.lead.text-secondary ¡Contame!
+                .mt-4
+                  a.btn.btn-lg.btn-primary.m-1(href='#contacto' data-dismiss='modal')
+                    i.fa.fa-fw.text-secondary.fa-paper-plane
+                    |  Contacto
+                  button.btn.btn-lg.btn-secondary.m-1(type='button' data-dismiss='modal') ✖ Cerrar
+      .col-md-4.order-md-3.mt-5.mt-md-0
+        img.img-fluid(data-src='/assets/img/servicios/capacitacion.svg' alt='capacitacion empresarial' width='983' height='803')
+        h3.mt-3 Capacitación Empresarial
+        //- a.btn.btn-lg.btn-secondary(href='/servicios#empresarial') ✚ Más
+        a.btn.btn-lg.btn-secondary(data-toggle='modal' href='#capacitacion-empresarial') ✚ Más
+        .modal#capacitacion-empresarial(tabindex='-1' role='dialog' aria-hidden='true')
+          .modal-dialog.modal-lg(role='document')
+            .modal-content
+              .modal-body.py-5.px-lg-5.text-muted
+                button.close(type='button' data-dismiss='modal' aria-label='Cerrar') ✖
+                p.h2.text-uppercase.text-secondary Capacitación Empresarial
+                p.mb-5 Estimad@, puedo ser un puente entre el conocimiento técnico a transmitir y tu equipo, de modo tal que logres los cambios de mindset requeridos en tu grupo de trabajo ante los desafíos vigentes.
+                .d-flex.justify-content-center.mb-5
+                  i.fa.fa-fw.fa-3x.m-1.text-primary.fa-book
+                  i.fa.fa-fw.fa-3x.m-1.text-secondary.fa-arrow-right
+                  i.fa.fa-fw.fa-3x.m-1.text-primary.fa-chalkboard-teacher
+                  i.fa.fa-fw.fa-3x.m-1.text-secondary.fa-arrow-right
+                  i.fa.fa-fw.fa-3x.m-1.text-primary.fa-users
+                .row.align-items-center.mb-5
+                  .col-sm-3: img(data-src='/assets/img/servicios/capacitacion-conocimiento.svg' alt='capacitacion-conocimiento.svg' width='500' height='500')
+                  .col.p-1.d-sm-none: i.fa.fa-3x.text-secondary.fa-arrow-down
+                  .col.p-1.d-none.d-sm-block: i.fa.fa-3x.text-secondary.fa-arrow-right
+                  .col-sm-4: img(data-src='/assets/img/servicios/capacitacion-puente.svg' alt='capacitacion-puente.svg' width='500' height='500')
+                  .col.p-1.d-sm-none: i.fa.fa-3x.text-secondary.fa-arrow-down
+                  .col.p-1.d-none.d-sm-block: i.fa.fa-3x.text-secondary.fa-arrow-right
+                  .col-sm-3: img(data-src='/assets/img/servicios/capacitacion-equipo.svg' alt='capacitacion-equipo.svg' width='500' height='500')
+                .row.align-items-center.mb-5
+                  .col-sm-3: img(data-src='/assets/img/servicios/capacitacion-informacion.svg' alt='capacitacion informacion' width='500' height='500')
+                  .col.p-1.d-sm-none: i.fa.fa-3x.text-primary.fa-arrow-down
+                  .col.p-1.d-none.d-sm-block: i.fa.fa-3x.text-primary.fa-arrow-right
+                  .col-sm-4: img(data-src='/assets/img/servicios/capacitacion-pasarela.svg' alt='capacitacion pasarela' width='500' height='500')
+                  .col.p-1.d-sm-none: i.fa.fa-3x.text-primary.fa-arrow-down
+                  .col.p-1.d-none.d-sm-block: i.fa.fa-3x.text-primary.fa-arrow-right
+                  .col-sm-3: img(data-src='/assets/img/servicios/capacitacion-grupo.svg' alt='capacitacion grupo' width='500' height='500')
+                h4.h3.text-uppercase.text-secondary.mt-5.mb-4 Modalidades
+                .row
+                  .col-sm-6.mb-4
+                    .d-inline-block.rounded-circle.bg-secondary.p-4
+                      i.fa.fa-fw.fa-3x.fa-crosshairs
+                    h5.h4.lead.text-primary.mt-3.mb-2 Enfoque a objetivos específicos
+                    p Un pequeño texto descriptivo para que mola tanto que no puedan resistir contactar contigo, nena. Ya sabes, tu molas y yo molo, ambos molamos y ambos nos molamos.
+                  .col-sm-6.mb-4
+                    .d-inline-block.rounded-circle.bg-secondary.p-4
+                      i.fa.fa-fw.fa-3x.fa-chart-line
+                    h5.h4.lead.text-primary.mt-3.mb-2 Programas estadísticos y financieros 
+                    p Destinados a adquirir y actualizar contenidos con el fin de mejorar la performance laboral y las habilidades comunicativas del equipo basadas en el conocimiento científico.
+                p.lead.text-secondary ¡Consultáme!
+                .mt-4
+                  a.btn.btn-lg.btn-primary.m-1(href='#contacto' data-dismiss='modal')
+                    i.fa.fa-fw.text-secondary.fa-paper-plane
+                    |  Contacto
+                  button.btn.btn-lg.btn-secondary.m-1(type='button' data-dismiss='modal') ✖ Cerrar

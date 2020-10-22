@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Alegreya Regular'), local('Alegreya-Regular'), url('Alegreya-Regular.otf') format('otf');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: local('Alegreya Bold Italic'), local('Alegreya-BoldItalic'), url('Alegreya-BoldItalic.otf') format('otf');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local('Brandon'), local('Brandon_blk'), url('Brandon_blk.otf') format('otf');
+}
+@font-face {
+  font-family: 'Din';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Din'), local('DINNextLTPro-Regular'), url('DINNextLTPro-Regular.otf') format('otf');
+}
+@font-face {
+  font-family: 'NothingYouCouldDo';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Nothing You Could Do'), local('NothingYouCouldDo'), url('NothingYouCouldDo.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Permanent Marker'), local('Permanent-Marker'), url('PermanentMarker.ttf') format('ttf');
+}

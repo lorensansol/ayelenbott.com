@@ -1,0 +1,8 @@
+# DEVELOPMENT CONFIG
+
+livereload: true
+critical-path-css: false
+include: [_assets]
+sass:
+  sass_dir: _assets/css/_sass
+  style: compressed
