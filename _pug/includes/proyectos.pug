@@ -3,14 +3,14 @@ section#proyectos.bg-secondary
     h2.h1.text-primary.text-uppercase Proyectos
     p.lead ¡Pasión en acción!
     .row
-      .col-md-6.my-4.my-md-0
+      .col-sm.d-flex.flex-column.my-4.my-sm-0
         //- .d-inline-block.rounded-circle.bg-primary.p-4
           i.fa.fa-fw.fa-3x.fa-cog
         //- img.img-fluid.mt-4(data-src='/assets/img/servicios/rueda-conocimiento.svg' alt='la rueda del conocimiento' width='1036' height='567')
         img.img-fluid.mt-4(data-src='/assets/img/servicios/reading.svg' alt='reading' width='1036' height='567')
         h3.mt-3 La Rueda del Conocimiento
-        //- a.btn.btn-lg.btn-primary(href='/la-rueda-del-conocimiento') ✚ Más
-        a.btn.btn-lg.btn-primary(data-toggle='modal' href='#la-rueda-del-conocimiento') ✚ Más
+        //- a.btn.btn-lg.btn.mx-auto-primary(href='/la-rueda-del-conocimiento') ✚ Más
+        a.btn.btn-lg.btn-primary.mx-auto.mt-auto(data-toggle='modal' href='#la-rueda-del-conocimiento') ✚ Más
         .modal#la-rueda-del-conocimiento(tabindex='-1' role='dialog' aria-hidden='true')
           .modal-dialog.modal-lg(role='document')
             .modal-content
@@ -27,54 +27,64 @@ section#proyectos.bg-secondary
                       p La rueda del conocimiento es un sistema de intercambio del conocimiento, a través del cual las personas que intervienen, reciben y comparten saber en sus distintas formas.
                       p El objetivo del proyecto es conectar a las personas con el saber, a través de diversos canales e interviniendo en los diferentes estados del mismo, generando posibilidades para todos aquellos que quieran ingresar y/o continuar en el camino del conocimiento.
                     i.fa.text-secondary.fa-quote-right.align-self-end
-                .row.text-dark.text-left.mx-auto
+                h4.h3.text-uppercase.text-secondary.mt-5.mb-4 Lo recorrido hasta aquí
+                .row.text-muted.text-left.mx-auto
                   .col-2.p-0.d-flex.flex-column
                     .badge.badge-secondary.badge-pill.mx-auto 2018
                     .badge.badge-secondary.badge-pill.my-1.mx-auto 2019
                     .h-100.pl-1.mx-auto.bg-primary
                   .col-10
                     p Iniciativa “Un libro x una clase”
-                    p ✚
+                    p.text-secondary ✚
                     p Donaciones de libros recibidas
-                    hr
+                    hr.bg-secondary
                     p La Rueda cuenta con más de 1000 libros :)
                   .col-2.p-0.d-flex.flex-column
                     .badge.badge-secondary.badge-pill.my-1.mx-auto 2020
                     .h-100.pl-1.mx-auto.bg-primary
                   .col-10
-                    p ➖
+                    p.h2.text-secondary -
                     p Pandemia
-                    hr
+                    hr.bg-secondary
                     p La Rueda conecta a los libros recibidos con lectores de la ciudad de Rosario (Santa Fe) y lugares aledaños
                   .col-2.p-0.d-flex.flex-column
                     .badge.badge-secondary.badge-pill.mt-1.mx-auto 2021
-                  .col-10 ¿¡Alguien se atreve a hablar del próximo año!?
+                  .col-10
+                    p ¿¡Alguien se atreve a hablar del próximo año!?
+                    p La intención es continuar con la actividades que se han llevado a cabo hasta ahora.
                 .mt-5
                   h4.lead.text-secondary ¿Cómo podés ser parte de la iniciativa?
                   .row
-                    .col-sm-4.mb-4
-                      .d-inline-block.rounded-circle.bg-primary.p-4
-                        i.fa.fa-fw.fa-3x.fa-exchange-alt
-                      h5.text-secondary.mt-3 Intercambio
+                    .col-lg.mb-3.text-sm-left.text-lg-center
+                      .fa-stack.fa-3x.float-sm-left.float-lg-none
+                        i.fa.fa-circle.fa-stack-2x.text-primary
+                        i.fa.fa-exchange-alt.fa-stack-1x.text-white
+                      h5.h4.text-uppercase.text-secondary.mt-3 Intercambio
                       p.text-muted Tomando o dando una clase a cambio de un libro
-                    .col-sm-4.mb-4
-                      .d-inline-block.rounded-circle.bg-primary.p-4
-                        i.fa.fa-fw.fa-3x.fa-gift
-                      h5.text-secondary.mt-3 Donación
-                      p.text-muted Donando libros para una noble causa :)
-                    .col-sm-4.mb-4
-                      .d-inline-block.rounded-circle.bg-primary.p-4
-                        i.fa.fa-fw.fa-3x.fa-hands-helping
-                      h5.text-secondary.mt-3 Voluntariado
+                    .col-lg.mb-3.text-sm-left.text-lg-center
+                      .fa-stack.fa-3x.float-sm-left.float-lg-none
+                        i.fa.fa-circle.fa-stack-2x.text-primary
+                        i.fa.fa-gift.fa-stack-1x.text-white
+                      h5.h4.text-uppercase.text-secondary.mt-3 Donación
+                      p.text-muted Ese libro que ya leiste puede seguir sorprendiendo. ¡Donalo!
+                    .col-lg.mb-3.text-sm-left.text-lg-center
+                      .fa-stack.fa-3x.float-sm-left.float-lg-none
+                        i.fa.fa-circle.fa-stack-2x.text-primary
+                        i.fa.fa-hands-helping.fa-stack-1x.text-white
+                      h5.h4.text-uppercase.text-secondary.mt-3 Voluntariado
                       p.text-muted Participando en actividades de promoción de lectura
+                .mt-4.text-muted ¡Seguí las novedades en <a href="https://www.instagram.com/sabernosacerca/">@sabernosacerca</a> y súmate a la iniciativa!
                 .mt-4
+                  a.btn.btn-lg.btn-secondary.m-1(href='https://www.instagram.com/sabernosacerca/')
+                    i.fab.fa-fw.text-primary.fa-instagram
+                    |  @sabernosacerca
                   a.btn.btn-lg.btn-primary.m-1(href='#contacto' data-dismiss='modal')
                     i.fa.fa-fw.text-secondary.fa-paper-plane
                     |  Contacto
                   button.btn.btn-lg.btn-secondary.m-1(type='button' data-dismiss='modal') ✖ Cerrar
-      .col-md-6
+      .col-sm.d-flex.flex-column
         //- .d-inline-block.rounded-circle.bg-primary.p-4
           i.fa.fa-fw.fa-3x.fa-pen
         img.img-fluid.mt-4(data-src='/assets/img/servicios/blogging.svg' alt='blogging' width='1036' height='567')
         h3.mt-3 Blogging
-        a.btn.btn-lg.btn-primary(href='/blog/') ✚ Más
+        a.btn.btn-lg.btn-primary.mx-auto.mt-auto(href='/blog/') ✚ Más

@@ -1,32 +1,35 @@
 nav#servicios-nav.navbar.navbar-expand-lg.navbar-dark.bg-secondary.fixed-top
   .container.p-0
     //- a.navbar-brand.font-weight-bold.mr-2(href='#top') SEA COMO SEO
-    button.navbar-toggler.ml-auto(type='button' data-toggle='collapse' data-target='#navbar-menu' aria-controls='navbar-menu' aria-expanded='false' aria-label='Toggle navigation')
+    //- button.navbar-toggler.ml-auto(type='button' data-toggle='collapse' data-target='#navbar-menu' aria-controls='navbar-menu' aria-expanded='false' aria-label='Toggle navigation')
       //- | MENU 
       i.fa.fa-fw.fa-bars
+    button.navbar-toggler.ml-auto.fa-stack(type='button' data-toggle='collapse' data-target='#navbar-menu' aria-controls='navbar-menu' aria-expanded='false' aria-label='Toggle navigation')
+      i.fa.fa-circle.fa-stack-2x.text-primary
+      i.fa.fa-bars.fa-stack-1x.text-white
     #navbar-menu.navbar-collapse.collapse
-      ul#servicios-navbar.navbar-nav.text-uppercase.ml-auto.w-100.justify-content-between
-        li.nav-item.mr-1
+      ul#servicios-navbar.navbar-nav.text-uppercase.d-table.mx-auto.d-lg-flex.justify-content-between.w-lg-100
+        li.nav-item.mx-auto
           a.nav-link(href='#sobre')
             i.fa.fa-fw.text-primary.mr-1.fa-user
             |  Sobre mi
-        li.nav-item.mr-1
+        li.nav-item.mx-auto
           a.nav-link(href='#que')
             i.fa.fa-fw.text-primary.mr-1.fa-heart
             |  ¿Qué quiero?
-        li.nav-item.mr-1
+        li.nav-item.mx-auto
           a.nav-link(href='#servicios')
             i.fa.fa-fw.text-primary.mr-1.fa-chalkboard-teacher
             |  Servicios
-        li.nav-item.mr-1
+        li.nav-item.mx-auto
           a.nav-link(href='#proyectos')
             i.fa.fa-fw.text-primary.mr-1.fa-book
             |  Proyectos
-        li.nav-item.mr-1
+        li.nav-item.mx-auto
           a.nav-link(href='#blog')
             i.fa.fa-fw.text-primary.mr-1.fa-pen
             |  Blog
-        li.nav-item
+        li.nav-item.mx-auto
           a.nav-link.btn.btn-primary.px-3(href='#contacto')
               i.fa.fa-fw.text-secondary.mr-1.fa-paper-plane
               |  Contacto

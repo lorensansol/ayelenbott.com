@@ -43,9 +43,30 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
+- certificate en btn whatsapp
+- aye
+  - badgets?
+  - menu burgrer con certificate
+- windows ayelen
+  - font din
+  - contacto
+    - background
+    - no se ven btn llamar, facebook e instagram
+- movil
+  - centrado vertical header
+  - color
+    - FA
+    - h2
+      - sobre mi
+      - que
+      - blog
+    - h3 servicios
+    - lead contacto
+    - hastags
+    - onclick footer
 - critical path css
 - author description
-- horario
+- educando por formando?
 - seleccionar imágenes de capacitación, copiar en _assets y borrar no seleccionadas
 - featured image
 

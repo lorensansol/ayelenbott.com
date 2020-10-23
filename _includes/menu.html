@@ -5,7 +5,7 @@
 <div id="blackover-nav" class="blackover"></div>
 <nav id="menu">
     <ul>
-        <h3>Navegación</h3>
+        <h3 class="text-secondary text-uppercase">Navegación</h3>
         {% for item in site.data.navigation %}
             <li>
                 <a
@@ -18,6 +18,7 @@
                         class="text-primary"
                     {% endif %}
                 >
+                    <i class="fas fa-fw {% if item.fa %}fa-{{ item.fa }}{% endif %} text-secondary"></i>
                     {{ item.name }}
                 </a>
             </li>

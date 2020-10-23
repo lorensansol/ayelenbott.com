@@ -171,3 +171,10 @@ span[onclick]:not(.btn):hover {
   color: $white !important;
   min-width: auto;
 }
+
+// Exends
+@media screen and (min-width: 992px) {
+  .w-lg-100 {
+    width: 100%;
+  }
+}

@@ -1,22 +1,29 @@
 - name: Inicio
   link: /
+  fa: home
 - name: Blog
   link: /blog/
+  fa: pen
 - name: Categorías
   link: /categorias
   onclick: true
+  fa: bookmark
 - name: Etiquetas
   link: /etiquetas
   onclick: true
+  fa: tag
 # - name: Autores
 #   link: /autores
 #   onclick: true
 - name: Sobre
   link: /#sobre
-  onclick: true
+  fa: user
+- name: Servicios
+  link: /#servicios
+  fa: chalkboard-teacher
+- name: Proyectos
+  link: /#proyectos
+  fa: book
 - name: Contacto
   link: /#contacto
-  onclick: true
-- name: Servicios
-  link: /servicios
-  onclick: true
+  fa: paper-plane

@@ -14,7 +14,7 @@ burger && burger.addEventListener('click', () => {
 
 // Navbar links click (close menu)
 navbar && navbar.addEventListener('click', e => {
-  if (e.target.classList.contains('nav-link') && window.innerWidth < 1024) {
+  if (e.target.classList.contains('nav-link') && window.innerWidth < 992) {
     burgerTarget.classList.add('collapse')
     navbar.classList.add('navbar-transparent')
   }
@@ -22,14 +22,14 @@ navbar && navbar.addEventListener('click', e => {
 
 // Shot Top Scroll
 setTimeout( () => {
-  if(window.innerWidth >= 1024){
+  if(window.innerWidth >= 992){
     scrollShot(
-      '-100%',
-      '0px',
-      '#aye',
-      () => navbar.classList.add('top'),
+      '20%',
+      '-120%',
+      'body',
+      () => navbar.classList.remove('top'),
       () => undefined,
-      () => navbar.classList.remove('top')
+      () => navbar.classList.add('top')
     )
   } else {
     navbar.classList.add('navbar-transparent')
