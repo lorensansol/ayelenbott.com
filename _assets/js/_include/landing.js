@@ -21,7 +21,7 @@ navbar && navbar.addEventListener('click', e => {
 })
 
 // Shot Top Scroll
-setTimeout( () => {
+navbar && setTimeout( () => {
   if(window.innerWidth >= 992){
     scrollShot(
       '20%',
