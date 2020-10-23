@@ -43,8 +43,9 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
+- search en firefox y safary
 - certificate en btn whatsapp
-- probar search
+- target blank en enlaces externos
 - aye
   - badgets?
   - menu burgrer con certificate
