@@ -28,14 +28,14 @@ pug --out _layouts/ _pug/*.pug --watch
 Subir a producción previo minificar y purgar css + minificar js (no olvidar descomentar site.critical-path-css y comentar site.include en \_config.yml):
 
 ```bash
-# purgar css
-purgecss --css _site/_assets/css/styles.css --content _site/**/*.html,_site/assets/js/*.js --output assets/css/
-
 # minificar archivos js
 terser _site/_assets/js/scripts.js --comments false --output assets/js/scripts.js
 terser _site/_assets/js/smooth-scroll.js --comments false --output assets/js/smooth-scroll.js
 terser _site/_assets/js/lunr.js --comments false --output assets/js/lunr.js
 # terser _site/_assets/js/lunrsearchengine.js --comments false --output assets/js/lunrsearchengine.js
+
+# purgar css
+purgecss --css _site/_assets/css/styles.css --content _site/**/*.html,_site/assets/js/*.js --output assets/css/
 
 # deploy con fecha actual
 git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
@@ -44,6 +44,7 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 ## FALTA
 
 - certificate en btn whatsapp
+- probar search
 - aye
   - badgets?
   - menu burgrer con certificate

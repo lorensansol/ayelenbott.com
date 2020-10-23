@@ -3,11 +3,11 @@
 // setTimeout(() => document.body.className='' ,500);
 
 // Remove all :hover stylesheets on mobile
-function hasTouch() {
-	return 'ontouchstart' in document.documentElement
-			|| navigator.maxTouchPoints > 0
-			|| navigator.msMaxTouchPoints > 0;
-}
+// function hasTouch() {
+// 	return 'ontouchstart' in document.documentElement
+// 			|| navigator.maxTouchPoints > 0
+// 			|| navigator.msMaxTouchPoints > 0;
+// }
 
 if (hasTouch()) { 
 	try {
