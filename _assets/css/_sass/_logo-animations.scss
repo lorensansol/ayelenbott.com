@@ -36,7 +36,7 @@
 }
 
 // Animations
-#cut       { animation: cut 1s linear 1s both; }
+#cut       { animation: cut .5s linear 1s both; }
 #ari       { animation: rotate-out-2-bl-cw .5s linear 1.485s both;
              transform-origin: 56% 76%; }
 #logo-old  { animation: fade-out-br 1s 2.5s both; }
@@ -145,7 +145,7 @@ header#aye {
 
 
 // NO NINJA ANIMATION
-$ninja-animation: false;
+$ninja-animation: true;
 @if $ninja-animation == false {
   #cut {
     top: 26%;
