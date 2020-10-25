@@ -47,6 +47,3 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
   - font din
   - no se ven btn llamar, facebook e instagram
 - author description
-- critical path css
-
-- Marcado de datos estructurados
