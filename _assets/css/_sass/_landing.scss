@@ -123,7 +123,7 @@ section {
 .modal {
     display: block;
     overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-y: auto;
     background-color: rgba($secondary, .5);
     opacity: 0;
     height: 0;
