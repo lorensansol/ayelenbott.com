@@ -18,10 +18,10 @@ $cookies-message-width: 14em;
 	&.active {
 		@if $option-one {
 			left: 0;
-			transition: left .5s 8s;
+			// transition: left .5s 8s;
 		} @else {
 			bottom: 0;
-			transition: bottom .5s 8s;
+			// transition: bottom .5s 8s;
 		}
 
 	}

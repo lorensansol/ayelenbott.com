@@ -46,18 +46,7 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 - windows ayelen
   - font din
   - no se ven btn llamar, facebook e instagram
-- movil
-  - centrado vertical header
 - author description
 - critical path css
-
-
-- Quitar acentos en tag links de toc
-- CLI / Gulp padre
-  - critical
-  - img
-  - babel
-  - Eliminar comentarios #! de css (purgecss remove special comments)
-  - Eliminar comentarios mapping
 
 - Marcado de datos estructurados

@@ -4,7 +4,7 @@ const cookiesMessageAcept = document.getElementById('cookies-message-acept')
 const cookiesMessageToogle = document.getElementById('cookies-message-toggle')
 
 // Add class active from cookies message if cookies don't acept
-!localStorage.controlcookie && cookiesMessage.classList.add('active')
+!localStorage.controlcookie && setTimeout( () => cookiesMessage.classList.add('active') , 8000)
 
 // Onclick cookies acept
 cookiesMessageAcept.addEventListener('click', () => {
