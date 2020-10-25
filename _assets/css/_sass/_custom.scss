@@ -172,6 +172,17 @@ span[onclick]:not(.btn):hover {
   min-width: auto;
 }
 
+// Correct position of Fonta awesome long icons
+.fa-lg {
+    transform: translateY(.15rem);
+}
+.callnow,
+.btn-up {
+  .fa-lg {
+      transform: none;
+  }
+}
+
 // Exends
 @media screen and (min-width: 992px) {
   .w-lg-100 {

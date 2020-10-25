@@ -7,7 +7,9 @@
     }
     transition: all .3s;
     &.navbar-transparent {
-        background-color: transparent !important;
+        // background-color: transparent !important;
+        height: 0;
+        padding: 0 !important;
     }
     &.navbar-dark .navbar-nav .nav-link {
         color: $white;
@@ -37,10 +39,16 @@
         // color: $white;
         // border-radius: 100rem;
         // background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: .5rem;
+        right: 0.125rem;
         border-color: transparent;
         outline: none;
         .fa {
             line-height: 0;
+        }
+        .fa-stack-2x {
+            text-shadow: 0 2px 0 rgba(0,0,0,0.07);
         }
         .fa-bars:before {
             content: '\f00d';
@@ -55,7 +63,7 @@
     }
     .navbar-collapse {
         overflow: hidden;
-        max-height: 200vh;
+        max-height: 100vh;
         transition: all .3s;
         &.collapse:not(.show) {
             @media (max-width: 991px) {
@@ -93,8 +101,10 @@ section {
     padding: 6rem 0;
 }
 
-// Sobre
-#sobre {
+// Badge font weight normal
+#sobre,
+.blog-grid-item,
+.callnow-caption {
     .badge {
         font-size: 1rem;
         font-weight: normal;

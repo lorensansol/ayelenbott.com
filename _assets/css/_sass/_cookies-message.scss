@@ -16,6 +16,7 @@ $cookies-message-width: 14em;
 	z-index: 9000;
 	transition: all .5s;
 	&.active {
+		transition: all .5s 8s;
 		@if $option-one {
 			left: 0;
 		} @else {
