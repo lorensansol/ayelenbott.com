@@ -101,12 +101,17 @@ section {
     padding: 6rem 0;
 }
 
+// Sobre
+#sobre {
+    .badge {
+        font-size: 1rem;
+    }
+}
 // Badge font weight normal
 #sobre,
 .blog-grid-item,
 .callnow-caption {
     .badge {
-        font-size: 1rem;
         font-weight: normal;
     }
 }
