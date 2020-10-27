@@ -159,6 +159,17 @@ span[onclick]:not(.btn):hover {
   width: auto !important;
 }
 
+// Correct post date
+.blog-grid-item .post-date {
+  position: absolute;
+  margin: 0;
+  padding: .5em .4em .25em;
+  border-radius: .5rem 0;
+  line-height: 1;
+  color: $white;
+  background-color: rgba(202, 147, 52, .5); // transparency($primary, .75);
+}
+
 // Correct the shadows
 .shadow {
   box-shadow: 0 1px 0 1px rgba(0,0,0,0.07) !important
@@ -172,14 +183,29 @@ span[onclick]:not(.btn):hover {
   min-width: auto;
 }
 
-// Correct position of Fonta awesome long icons
+// Correct position of Font Awesome long icons
 .fa-lg {
-    transform: translateY(.15rem);
+    transform: translateY(.0625rem);
 }
-.callnow,
-.btn-up {
-  .fa-lg {
-      transform: none;
+@media screen and (min-width: 768px) {
+  .callnow,
+  .btn-up {
+    .fa-lg {
+        transform: none;
+    }
+  }
+}
+
+// Font Awesome fixed buttons
+.navbar-toggler,
+.btn-up,
+.callnow .fa-stack {
+  font-size: 1.5rem;
+  .fa-stack-1x:not(.fa-stack-btn-sm) {
+    font-size: 1.5em;
+  }
+  .fa-stack-2x {
+    text-shadow: 0 2px 0 rgba(0,0,0,0.07);
   }
 }
 

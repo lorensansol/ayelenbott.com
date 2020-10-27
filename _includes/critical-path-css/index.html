@@ -1,0 +1,11 @@
+<style>
+{% if page.url == '/' %}
+  {% include critical-path-css/critical-index.css %}
+{% else %}
+  {% if page.collection == 'posts' or page.collection == 'pages' %}
+    {% include critical-path-css/critical-posts.css %}
+  {% else %}
+    {% include critical-path-css/critical-bloglist.css %}
+  {% endif %}
+{% endif %}
+</style>

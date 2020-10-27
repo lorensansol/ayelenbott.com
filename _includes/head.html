@@ -22,7 +22,7 @@
     {% endif %}
 
     {% if site.critical-path-css %}
-        {% include critical-path-css.html %}
+        {% include critical-path-css/index.html %}
     {% endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}{{ assetsdir }}/css/styles.css" {% if jekyll.environment == "production" %}media="print" onload="this.media='all'"{% endif %}>
@@ -34,10 +34,10 @@
         <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/solid.css" media="print" onload="this.media='all'"> -->
         <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/brands.css" media="print" onload="this.media='all'"> -->
     {% else %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fonts.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fontawesome-v5.10.0.css" media="print" onload="this.media='all'">
+        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fonts.css" media="print" onload="this.media='all'"> -->
+        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/_assets/fonts/fontawesome-v5.10.0.css" media="print" onload="this.media='all'"> -->
         <link rel="stylesheet" href="{{ site.baseurl }}/_assets/css/prism.css" media="print" onload="this.media='all'">
-        <script src="{{ site.baseurl }}/_assets/js/prism.js" assync></script>
+        <script src="{{ site.baseurl }}/_assets/js/prism.js" async></script>
     {% endif %}
 
     <!-- Favicon -->
