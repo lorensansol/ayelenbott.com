@@ -79,12 +79,14 @@ Optimice assets with gulp (in parent directory):
 cd ../
 ## minify js files
 cd ../;gulp js_ayelenbott.com;cd ayelenbott.com
-## minify css files
-cd ../;gulp css_ayelenbott.com;cd ayelenbott.com
 ## critical css
 cd ../;gulp critical_ayelenbott.com;cd ayelenbott.com
+## minify css files
+cd ../;gulp css_ayelenbott.com;cd ayelenbott.com
 ## compress img
 cd ../;gulp img_ayelenbott.com;cd ayelenbott.com
+## compress fonts
+cd ../;gulp fonts_ayelenbott.com;cd ayelenbott.com
 ## return to proyect directory
 cd ayelenbott.com
 ```
