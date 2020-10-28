@@ -105,6 +105,3 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 - windows ayelen
   - font din
   - no se ven btn llamar, facebook e instagram
-- author description
-- titulo blog
-- modal bloggin?
