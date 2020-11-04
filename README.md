@@ -86,7 +86,7 @@ cd ../;gulp css_ayelenbott.com;cd ayelenbott.com
 ## compress img
 cd ../;gulp img_ayelenbott.com;cd ayelenbott.com
 ## compress fonts
-cd ../;gulp fonts_ayelenbott.com;cd ayelenbott.com
+cd ../;gulp fonts2_ayelenbott.com;cd ayelenbott.com
 ## return to proyect directory
 cd ayelenbott.com
 ```
