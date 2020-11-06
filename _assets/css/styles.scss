@@ -23,6 +23,7 @@ $danger: $rojo;
 $font-family-sans-serif: 'Din', sans-serif;
 $headings-font-family: 'Brandon', sans-serif;
 $leads-font-family: 'Alegreya', serif;
+$enable-responsive-font-sizes: true;
 
 // Other
 $enable-rounded: true;
@@ -38,6 +39,7 @@ $btn-type-pill: true;
 @import 'btn-up';
 @import 'btn-callnow';
 @import 'lazy-load';
+@import 'modal';
 @import 'custom';
 @import 'landing';
 @import 'logo-animations';

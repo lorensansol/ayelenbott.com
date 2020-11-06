@@ -1,13 +1,12 @@
-<div class="sidebar"></div>   
-<div class="nav-icon">
+<div class="nav-icon m-2 m-sm-3 bg-primary rounded-circle shadow">
     <div class="hamburger-bar"></div>
 </div>
 <div id="blackover-nav" class="blackover"></div>
-<nav id="menu">
-    <ul>
-        <h3 class="text-secondary text-uppercase">Navegación</h3>
+<nav id="menu" class="bg-white p-5">
+    <h2 class="text-secondary text-uppercase my-4">Navegación</h2>
+    <ul class="list-unstyled p-0">
         {% for item in site.data.navigation %}
-            <li>
+            <li class="mb-3">
                 <a
                     {% if item.onclick %}
                         onclick="location.href='{{ site.baseurl }}{{ item.link }}'"
@@ -15,6 +14,8 @@
                         href="{{ site.baseurl }}{{ item.link }}"
                     {% endif %}
                     {% if page.url == item.link %}
+                        class="text-muted"
+                    {% else %}
                         class="text-primary"
                     {% endif %}
                 >
@@ -23,6 +24,27 @@
                 </a>
             </li>
         {% endfor %}
-    </ul>   
+    </ul>
+    {% if site.search %}
+        {% include search-lunr.html %}
+    {% endif %}
 </nav>
-{% include search-lunr.html %}
+{% if site.search %}
+  <div id="lunrsearchresults">
+    <div id="resultsmodal" class="modal fade d-block"  tabindex="-1" role="dialog" aria-labelledby="resultsmodal">
+      <div class="modal-dialog shadow" role="document">
+        <div class="modal-content">
+          <div class="modal-header" id="modtit">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"> &times; </button>
+          </div>
+          <div class="modal-body">
+            <ul class="mb-0"></ul>   
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

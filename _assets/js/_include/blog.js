@@ -1,70 +1,33 @@
-
-// Reset animations on page: body.preload
-// setTimeout(() => document.body.className='' ,500);
-
-// Remove all :hover stylesheets on mobile
-// function hasTouch() {
-// 	return 'ontouchstart' in document.documentElement
-// 			|| navigator.maxTouchPoints > 0
-// 			|| navigator.msMaxTouchPoints > 0;
-// }
-
-// if (hasTouch()) { 
-// 	try {
-// 		for (var si in document.styleSheets) {
-// 			var styleSheet = document.styleSheets[si];
-// 			if (!styleSheet.rules) continue;
-
-// 			for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-// 				if (!styleSheet.rules[ri].selectorText) continue;
-
-// 				if (styleSheet.rules[ri].selectorText.match(':hover')) {
-// 					styleSheet.deleteRule(ri);
-// 				}
-// 			}
-// 		}
-// 	} catch (ex) {}
-// }
-
 // Navigation
-
-	// Navigation Selector
-	const navSelector = '.nav-icon, #menu, #blackover-nav, body';
-
-	// Toggle navigation function
-	function toggleNav(){
-		document.querySelectorAll(navSelector).forEach( e => e.classList.toggle('active') );
-	}
-
-	// Close navigation function
-	function closeNav(){
-		document.querySelectorAll(navSelector).forEach( e => e.classList.remove('active') );
-	}
-
-	// Toggle navigation when clicked .nav-icon
-	const navIcon = document.querySelector('.nav-icon')
-	navIcon && navIcon.addEventListener('click', toggleNav);
-
-	// Close navigation when clicked .blackover (Black background)
-	const blackoverNav = document.getElementById('blackover-nav')
-	blackoverNav && blackoverNav.addEventListener('click', closeNav);
-
-	// Close navigation when keyup escape
-	document.addEventListener("keyup", e => e.keyCode == 27 && closeNav() );
+//// Navigation Selector
+const navSelector = '.nav-icon, #menu, #blackover-nav, body';
+//// Toggle navigation function
+function toggleNav(){
+	document.querySelectorAll(navSelector).forEach( e => e.classList.toggle('active') );
+	document.body.classList.toggle('overflow-hidden');
+}
+//// Close navigation function
+function closeNav(){
+	document.querySelectorAll(navSelector).forEach( e => e.classList.remove('active') );
+	document.body.classList.remove('overflow-hidden');
+}
+//// Toggle navigation when clicked .nav-icon
+const navIcon = document.querySelector('.nav-icon')
+navIcon && navIcon.addEventListener('click', toggleNav);
+//// Close navigation when clicked .blackover (Black background)
+const blackoverNav = document.getElementById('blackover-nav')
+blackoverNav && blackoverNav.addEventListener('click', closeNav);
+//// Close navigation when keyup escape
+document.addEventListener("keyup", e => e.keyCode == 27 && closeNav() );
 
 // Search
 {% if site.search == true %}
-	// Toggle search
-	const showSearch = document.querySelector('.show-search')
-	showSearch && showSearch.addEventListener('click', () => {
-		document.querySelector('.bd-search').classList.toggle('search--show');
-	});
-
 	// Active search.js wen clic in input
 	const lunrsearch = document.getElementById('lunrsearch')
 	lunrsearch && lunrsearch.addEventListener('click', function(){
-		loadScript('{{ site.baseurl }}/assets/js/lunr.js');
-		loadScript('{{ site.baseurl }}/assets/js/lunrsearchengine.js');
+		loadScript('{{ site.baseurl }}/_assets/js/lunr.js', function(){
+			loadScript('{{ site.baseurl }}/_assets/js/lunrsearchengine.js');
+		});
 	});
 {% endif %}
 

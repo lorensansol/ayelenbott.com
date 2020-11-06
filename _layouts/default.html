@@ -8,50 +8,42 @@ layout: compress
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
-<body id="top" class="layout-default">
+<body id="top" class="layout-blog {{ layout }}">
 
 <div class="d-flex flex-column">
-    <!-- Before div flexbox and after div order-2 for put the menú first -->
+  <!-- Before div flexbox and after div order-2 for put the menú first -->
 
-    <div class="site-content {% if page.url == '/blog/' %}firstpage{% endif %} order-2 pt-0">
+  <div class="site-content {% if page.url == '/blog/' %}firstpage{% endif %} order-2 mb-5 pb-5">
 
-        <div class="container pt-5">
+    <div class="container pt-5">
 
-            <!-- Site Logo/Name
-            ================================================== -->
+      <!-- Site Logo/Name -->
 
-            <!-- <a class="navbar-brand w-100 mx-auto d-block" href="{{ site.baseurl }}/">
-                <img class="m-0" src="{{ site.baseurl }}/assets/img/logo.svg" alt="{{ site.title }}" width="250" height="100">
-            </a> -->
+      {% if page.url == '/blog/' %}<h1 class="sitetag">{% else %}<div class="sitetag">{% endif %}
+        <a href="/blog/">
+          <span class="d-block h4 text-secondary text-uppercase">Blog personal de </span>
+          <span class="d-block lead">Ayelén Bott</span>
+        </a>
+      {% if page.url == '/blog/' %}</h1>{% else %}</div>{% endif %}
 
-            {% if page.url == '/blog/' or paginator.page > 1 %}
-                <a href="/blog/">
-                    <h1 class="sitetag mx-auto">
-                        <span class="d-block h4 text-secondary text-uppercase">
-                            {% if paginator.page > 1 %}
-                                Página {{paginator.page}} de {{paginator.total_pages}}
-                            {% else %}
-                                Blog personal de
-                            {% endif %}
-                        </span>
-                        <span class="d-block lead text-primary">Ayelén Bott</span>
-                    </h1>
-                </a>
-            {% endif %}
+      {% if paginator.page > 1 %}
+        <h1 class="sitetag">
+          <a class="text-secondary" href="/blog/">Página {{paginator.page}} de {{paginator.total_pages}}</a>
+        </h1>
+      {% endif %}
 
-            <!-- Content
-            ================================================== -->
-            <div class="main-content">
-                {{ content }}
-            </div>
-            
-            {% include newsletter.html %}
+      <!-- Content -->
+      <div class="main-content">
+        {{ content }}
+      </div>
+      
+      {% include newsletter.html %}
 
-        </div>
+    </div> <!-- /.container -->
 
-    </div> <!-- /.site-content -->
+  </div> <!-- /.site-content -->
 
-    {% include menu.html %}
+  {% include menu.html %}
 
 </div>
 

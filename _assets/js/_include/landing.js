@@ -3,8 +3,6 @@ const navbar = document.querySelector('.navbar')
 const burger = document.querySelector('.navbar-toggler')
 const burgerTarget = burger && document.querySelector(burger.dataset.target)
 const navLink = document.querySelectorAll('.nav-link')
-const elementClickToModalOpen = document.querySelectorAll('[data-toggle="modal"][data-target],[data-toggle="modal"][href^="#"]')
-const elementClickToModalClose = document.querySelectorAll('[data-dismiss="modal"], .modal')
 
 // Navbar burguer click
 burger && burger.addEventListener('click', () => {
@@ -51,29 +49,3 @@ scrollShot(
   () => undefined,
   () => undefined
 )
-
-// Modal
-//// Open modal
-elementClickToModalOpen.forEach( e => {
-  e.addEventListener('click', () => {
-    const modal = document.querySelector(e.dataset.target) || document.querySelector(e.hash)
-    modal.classList.add('show')
-    window.location.hash = modal.id
-  })
-})
-// Open modal wen load if URL there is hash
-if (window.location.hash) {
-  const idLikeHash = document.querySelector(window.location.hash + '.modal')
-  idLikeHash && idLikeHash.classList.add('show')
-}
-//// Close modal
-elementClickToModalClose.forEach( e => {
-  e.addEventListener('click', click => {
-    if ( click.target.classList.contains('modal') || click.target.dataset.dismiss == 'modal' ) {
-      const modalShow = document.querySelector('.modal.show')
-      modalShow && modalShow.classList.remove('show')
-      // Remove hash
-      window.history.replaceState('', document.title, window.location.origin)
-    }
-  })
-})

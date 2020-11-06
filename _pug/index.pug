@@ -8,7 +8,7 @@ html(lang="es")
   .
     {% include head.html %}
     {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-  body#top
+  body#top(class='{{ layout }}')
     include includes/nav.pug
     include includes/header.pug
     main.text-center

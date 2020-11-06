@@ -43,8 +43,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 // Headers blog colors
 .layout-default {
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
-  .posttitle, .sitetag {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $secondary;
   }
 }
@@ -54,7 +53,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $leads-font-family;
   font-weight: bold;
   font-style: italic;
-  font-size: 2rem;
+  @include font-size(2rem);
   line-height: 1;
   margin-bottom: 2rem;
 }
@@ -104,10 +103,12 @@ span[onclick]:not(.btn):hover {
 // Buttons, badges and inputs rounded-circular
 @if $btn-type-pill {
   .btn,
-  .badge,
-  .form-control {
-    border-radius: 1.5rem;
+  .badge {
+    @extend .rounded-pill;
   }
+}
+.badge {
+  @extend .badge-pill;
 }
 
 // Code > pre rounded
@@ -136,37 +137,14 @@ span[onclick]:not(.btn):hover {
   color: #000 !important;
 }
 
-// Logo and h1 of inicio
-.navbar-brand,
-.sitetag {
-  max-width: 700px;
-}
-
-// Correct show / hide search result
-#lunrsearchresults {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .5s linear, visibility .5s step-end;
-  &.show {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity .5s linear, visibility 0s step-start;
-  }
-}
-
 // Correct featured-image dimensions
 .featured-image {
   width: auto !important;
 }
 
 // Correct post date
-.blog-grid-item .post-date {
-  position: absolute;
-  margin: 0;
-  padding: .5em .4em .25em;
+.blog-grid-item .card > .post-date {
   border-radius: .5rem 0;
-  line-height: 1;
-  color: $white;
   background-color: rgba(202, 147, 52, .5); // transparency($primary, .75);
 }
 
@@ -213,5 +191,67 @@ span[onclick]:not(.btn):hover {
 @media screen and (min-width: 992px) {
   .w-lg-100 {
     width: 100%;
+  }
+}
+
+// Blog
+.article-post {
+  em {
+    color: lighten($primary, 20%);
+    font-style: normal;
+  }
+  h2, h3, h4, h5, h6 {
+    margin: 3rem 0 1rem;
+  }
+  & > ul, & > ol {
+    margin: 2rem 0;
+  }
+  ul, ol {
+    li:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+    ul, ol {
+      li:first-child {
+        margin-top: .5rem;
+      }
+    }
+    br {
+      content: " ";
+      display: block;
+      margin-bottom: .5rem;
+    }
+  }
+  blockquote {
+    padding-left: 2em;
+    margin-left: 0;
+    border: 0;
+    color: #6c757d;
+    // &:after,
+    &:before {
+      position: absolute;
+      font-family: $headings-font-family;
+      font-size: 4em;
+      color: lighten($primary, 20%);
+    }
+    &:before {
+      content: '“';
+      top: -.25em;
+      left: -.125em;
+    }
+    // &:after {
+    //   content: '”';
+    //   bottom: -.75em;
+    //   right: .25em;
+    // }
+    cite {
+      display: block;
+      text-align: right;
+      margin-top: .5rem;
+      color: lighten($primary, 20%);
+      &:before {
+        content: '— ';
+        color: #6c757d;
+      }
+    }
   }
 }
