@@ -6,9 +6,9 @@
     {% if page.beforetoc %}
       <p><em>{{page.beforetoc}}</em></p>
     {% endif %}
-    <div class="toc mt-4 mb-4">
+    <div class="toc mb-4 px-4 border rounded">
       <p class="lead">Índice</p>
-      {% include toc.html html=content %}
+      {% include toc.html html=content ordered=true %}
     </div>
   {% endif %}
   <!-- End Toc -->

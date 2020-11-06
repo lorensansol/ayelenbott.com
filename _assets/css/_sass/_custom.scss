@@ -221,6 +221,19 @@ span[onclick]:not(.btn):hover {
       margin-bottom: .5rem;
     }
   }
+  .toc ol {
+    counter-reset: item;
+    padding-left: 0;
+    li{
+      display: table;
+    }
+    li:before {
+      content: counters(item, ".") ". ";
+      counter-increment: item;
+      display: table-cell;
+      padding-right: .25rem;
+    }
+  }
   blockquote {
     padding-left: 2em;
     margin-left: 0;
