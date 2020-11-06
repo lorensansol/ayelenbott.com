@@ -103,9 +103,9 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 ## FALTA
 
 - Botones flotantes
-- limpiar memoirs
 - estilos if varios autores
 - Página servicios independiente
+- limpiar memoirs
 - windows ayelen
   - font din
   - no se ven btn llamar, facebook e instagram
