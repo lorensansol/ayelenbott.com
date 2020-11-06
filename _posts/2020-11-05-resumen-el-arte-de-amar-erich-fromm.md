@@ -19,7 +19,7 @@ El libro que hoy compartiré consta de cuatro capítulos:
 
 Resumiré cada uno de ellos para acercarte el contenido del mismo y parte del pensamiento del autor, y animándote a que, en caso de que lo que leas en este resumen te atrape, profundices con la lectura del libro y disfrutes de ella. ¡Adelante!
 
-## _Capítulo 1:_ ¿Es el amor un arte?
+## _CAPÍTULO 1:_ ¿Es el amor un arte?
 
 Existen ciertas premisas que hacen creer que no hay nada que aprender sobre el amor:
 
@@ -33,7 +33,7 @@ _¿Cuáles son los pasos necesarios para aprender cualquier arte?_
 
 Este proceso puede dividirse en dos etapas. Lo primero es dominar la teoría. De este modo, una vez adquirido todo ese conocimiento, se domina un arte luego de mucha práctica.
 
-## _Capítulo 2:_ La teoría del amor
+## _CAPÍTULO 2:_ La teoría del amor
 
 ### El amor, la respuesta al problema de la existencia humana
 
@@ -73,7 +73,7 @@ Aunque hay distintos tipos de amor, todos ellos presentan ciertos elementos bás
 
 El amor no es esencialmente una relación con una persona específica; es una _actitud_, una _orientación del carácter_ que determina el tipo de relación de una persona con el mundo como totalidad, no como un objeto amoroso. Si una persona ama sólo a otra y es indiferente al resto de sus semejantes, su amor no es amor, sino una relación simbiótica, o un egotismo ampliado.
 
-## _Capítulo 3:_ El amor y su desintegración en la sociedad occidental contemporánea
+## _CAPÍTULO 3:_ El amor y su desintegración en la sociedad occidental contemporánea
 
 ### El problema humano del capitalismo y su resultado
 
@@ -111,7 +111,7 @@ Así como el concepto freudiano del amor es una descripción de la experiencia d
 
 El amor como *satisfacción sexual recíproca*, y el amor como *trabajo en equipo* y como un refugio de la soledad, constituyen las dos formas *normales* de la desintegración del amor en la sociedad occidental contemporánea, de la patología del amor socialmente determinado. Existen además de éstas, otras formas individualizadas de la patología del amor que ocasionan sufrimientos conscientes.
 
-## _Capítulo 4:_ La práctica del amor
+## _CAPÍTULO 4:_ La práctica del amor
 
 _¿Se puede aprender algo de la práctica de un arte excepto practicándolo?_
 

@@ -102,12 +102,10 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- layout-default blog-grid-item a layout-blog
-- Título blog
-- menu blog a la derecha
 - Botones flotantes
 - limpiar memoirs
 - estilos if varios autores
+- Página servicios independiente
 - windows ayelen
   - font din
   - no se ven btn llamar, facebook e instagram
