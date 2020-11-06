@@ -1,7 +1,8 @@
 // MODAL
 const elementClickToModalOpen = document.querySelectorAll('[data-toggle="modal"][data-target],[data-toggle="modal"][href^="#"]')
 const elementClickToModalClose = document.querySelectorAll('[data-dismiss="modal"], .modal')
-//// Open modal
+
+// Open modal
 elementClickToModalOpen.forEach( e => {
   e.addEventListener('click', () => {
     const modal = document.querySelector(e.dataset.target) || document.querySelector(e.hash)
@@ -14,10 +15,13 @@ elementClickToModalOpen.forEach( e => {
 // Open modal wen load if URL there is hash
 if (window.location.hash) {
   const idLikeHash = document.querySelector(window.location.hash + '.modal')
-  idLikeHash && idLikeHash.classList.add('show')
-  document.body.classList.add('overflow-hidden')
+  if (idLikeHash) {
+    idLikeHash.classList.add('show')
+    document.body.classList.add('overflow-hidden')
+  }
 }
-//// Close modal
+
+// Close modal
 function closeModal() {
 	const modalShow = document.querySelector('.modal.show')
 	modalShow && modalShow.classList.remove('show')

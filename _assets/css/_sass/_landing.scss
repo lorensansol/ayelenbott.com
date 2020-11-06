@@ -77,7 +77,6 @@ header#aye {
   min-height: -webkit-fill-available;
   .badge {
     font-size: 1rem;
-    font-weight: normal;
     border: 1px $white solid;
   }
 }
@@ -100,14 +99,6 @@ section {
 #sobre {
   .badge {
     font-size: 1rem;
-  }
-}
-// Badge font weight normal
-#sobre,
-.blog-grid-item,
-.callnow-caption {
-  .badge {
-    font-weight: normal;
   }
 }
 

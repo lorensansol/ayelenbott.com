@@ -3,12 +3,12 @@ layout: default
 author: true
 ---
 <div class="sitetag mx-auto">
-  <h1 class="posttitle">{{ page.title }}</h1>
+  <h1 class="posttitle text-uppercase">{{ page.title }}</h1>
 </div>
 
 <div class="h3 d-flex flex-wrap justify-content-center align-items-center mt-5">
   {% for author in site.authors %}
-    <a class="smoothscroll btn btn-primary text-capitalize m-1" href="#{{ author[0] }}">
+    <a class="smoothscroll btn btn-primary m-1" href="#{{ author[0] }}">
       {% if author[1].avatar %}
         <img class="author-thumb rounded-circle" src="{{ site.baseurl }}{{ author[1].avatar }}" alt="{{ author.name }}" />
       {% else %}

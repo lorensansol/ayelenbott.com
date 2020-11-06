@@ -14,7 +14,7 @@
                 <a class="text-secondary" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </h2>
             {% if page.url != '/' %}
-                <p class="card-text mt-3">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
+                <p class="card-text text-muted mt-3">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
             {% endif %}
         </div>
         <!-- <div class="card-footer border-0 bg-white d-flex align-items-center py-3">

@@ -109,6 +109,7 @@ span[onclick]:not(.btn):hover {
 }
 .badge {
   @extend .badge-pill;
+  font-weight: normal;
 }
 
 // Code > pre rounded

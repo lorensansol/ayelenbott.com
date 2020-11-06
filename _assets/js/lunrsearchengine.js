@@ -44,7 +44,7 @@ function lunr_search(term) {
         var url = documents[ref]['url'];
         var title = documents[ref]['title'];
         var body = documents[ref]['body'].substring(0,160)+'...';
-        document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><small><span class='body'>"+ body +"</span><span class='url'>"+ url +"</span></small></a></li>";
+        document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'><a href='" + url + "'><span class='h4 title'>" + title + "</span><small><span class='body'>"+ body +"</span><span class='url'>"+ url +"</span></small></a></li>";
       }
     } else {
       document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No se encontraron resultados. ¡Cierra y prueba una búsqueda diferente!</li>";
