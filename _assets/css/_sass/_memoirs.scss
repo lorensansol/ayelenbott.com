@@ -77,12 +77,16 @@ img, img:hover {
   animation: fade-up 0.7s ease-out forwards running;
 }
 // menu
+.navbar-toggler,
 .nav-icon {
   position: fixed;
   right: 0;
   top: 0;
+  min-width: auto;
   width: 3rem;
-  height: 3rem;
+  height: 3rem !important;
+  border-color: transparent;
+  outline: none;
   cursor: pointer;
   z-index: 1026;
   .hamburger-bar,
@@ -100,20 +104,20 @@ img, img:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     &:before {
-      transform: rotate(0deg) translate(0px,-7px);
+      transform: rotate(0deg) translate(-50%,-7px);
     }
     &:after {
-      transform: rotate(0deg) translate(0px,7px);
+      transform: rotate(0deg) translate(-50%,7px);
     }
   }
   &.active {
     .hamburger-bar {
       background: transparent;
       &:before {
-        transform: rotate(-45deg) translate(0px,0px);
+        transform: rotate(-45deg) translate(-.53125rem, -.53125rem);
       }
       &:after {
-        transform: rotate(45deg) translate(0px,0px);
+        transform: rotate(45deg) translate(-.53125rem, .53125rem);
       }
     }
   }

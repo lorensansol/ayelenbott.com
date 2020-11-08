@@ -131,12 +131,6 @@ span[onclick]:not(.btn):hover {
   border-radius: 50%;
 }
 
-// Correct ofuscate badge of categories and tags
-.badge[onclick],
-.badge[onclick]:hover {
-  color: #000 !important;
-}
-
 // Correct featured-image dimensions
 .featured-image {
   width: auto !important;
@@ -145,7 +139,7 @@ span[onclick]:not(.btn):hover {
 // Correct post date
 .blog-grid-item .card > .post-date {
   border-radius: .5rem 0;
-  background-color: rgba(202, 147, 52, .5); // transparency($primary, .75);
+  // background-color: rgba(202, 147, 52, .5); // transparency($primary, .75);
 }
 
 // Correct the shadows
@@ -174,19 +168,6 @@ span[onclick]:not(.btn):hover {
   }
 }
 
-// Font Awesome fixed buttons
-.navbar-toggler,
-.btn-up,
-.callnow .fa-stack {
-  font-size: 1.5rem;
-  .fa-stack-1x:not(.fa-stack-btn-sm) {
-    font-size: 1.5em;
-  }
-  .fa-stack-2x {
-    text-shadow: 0 2px 0 rgba(0,0,0,0.07);
-  }
-}
-
 // Exends
 @media screen and (min-width: 992px) {
   .w-lg-100 {
@@ -197,7 +178,8 @@ span[onclick]:not(.btn):hover {
 // Blog
 .article-post {
   em {
-    color: lighten($primary, 20%);
+    color: $primary;
+    // color: lighten($primary, 20%);
     font-style: normal;
   }
   h2, h3, h4, h5, h6 {
@@ -244,7 +226,8 @@ span[onclick]:not(.btn):hover {
       position: absolute;
       font-family: $headings-font-family;
       font-size: 4em;
-      color: lighten($primary, 20%);
+      color: $primary;
+      // color: lighten($primary, 20%);
     }
     &:before {
       content: '“';
@@ -260,7 +243,8 @@ span[onclick]:not(.btn):hover {
       display: block;
       text-align: right;
       margin-top: .5rem;
-      color: lighten($primary, 20%);
+      color: $primary;
+      // color: lighten($primary, 20%);
       &:before {
         content: '— ';
         color: #6c757d;

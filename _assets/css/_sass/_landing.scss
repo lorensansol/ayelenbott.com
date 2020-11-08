@@ -1,7 +1,9 @@
 // Navbar
 .navbar {
   max-height: 100vh;
+  padding: 1.5rem 1rem;
   @media (min-width: 992px) {
+    padding: 0.5rem 1rem;
     overflow-y: hidden;
   }
   transition: all .3s;
@@ -33,29 +35,6 @@
          font-size: 1.25em;
        }
     // }
-  }
-  .navbar-toggler {
-    // color: $white;
-    // border-radius: 100rem;
-    // background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: .5rem;
-    right: 0.125rem;
-    border-color: transparent;
-    outline: none;
-    .fa {
-      line-height: 0;
-    }
-    .fa-bars:before {
-      content: '\f00d';
-    }
-  }
-  &.navbar-transparent {
-    .navbar-toggler {
-      .fa-bars:before {
-        content: '\f0c9';
-      }
-    }
   }
   .navbar-collapse {
     overflow-y: auto;

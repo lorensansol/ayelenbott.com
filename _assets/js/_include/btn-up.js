@@ -11,3 +11,10 @@ scrollShot(
 	() => { if(scrollY <= innerHeight * .2){ btnUp(); } },
 	() => { btnUp('add'); }
 );
+
+// Remove hash when clic
+document.querySelector('.btn-up').addEventListener('click', () => {
+	setTimeout( () => {
+		history.pushState('', document.title, window.location.pathname + window.location.search);
+	}, 500)
+})

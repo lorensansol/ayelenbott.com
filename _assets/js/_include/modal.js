@@ -28,7 +28,7 @@ function closeModal() {
 	document.body.classList.remove('overflow-hidden')
 	// Remove hash
 	if (window.location.hash) {
-		window.history.replaceState('', document.title, window.location.origin)
+    history.pushState('', document.title, window.location.pathname + window.location.search);
 	}
 }
 elementClickToModalClose.forEach( e => {

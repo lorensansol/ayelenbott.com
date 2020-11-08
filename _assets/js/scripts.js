@@ -10,6 +10,5 @@ layout: null
 {% include_relative _include/btn-up.js %}
 {% include_relative _include/lazy-load.js %}
 {% include_relative _include/modal.js %}
-// include_relative _include/bootstrap-native.min.js %}
 {% include_relative _include/blog.js %}
 {% include_relative _include/landing.js %}

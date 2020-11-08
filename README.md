@@ -89,6 +89,61 @@ cd ../;gulp img_ayelenbott.com;cd ayelenbott.com
 cd ../;gulp fonts2_ayelenbott.com;cd ayelenbott.com
 ## return to proyect directory
 cd ayelenbott.com
+
+
+
+cd Downloads/DIR/
+
+_site/**/*.html
+# 
+'<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg">' '</svg>'
+
+
+# inline
+perl -pi -e "s/\n/\ /gm" *.svg
+
+perl -pi -e "s/(<symbol|<\/svg>)/\$1/gm" *.svg
+
+(<symbol|<\/svg>)
+
+# 
+echo '<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg">' > fa.txt
+cat *.svg >> fa.txt
+echo '</svg>' >> fa.txt
+
+
+# Concatenate HTML files
+cat *.html > allhtmlfiles.txt
+
+cat brands.min.js solid.min.js fontawesome.min.js > fa-custom.min.js
+
+
+# Concatenate HTML files
+cat *.html > allhtmlfiles.txt
+# inline
+perl -pi -e "s/\n/\ /gm" allhtmlfiles.txt
+# get fontawesome classes
+perl -pi -e "s/.*?fa-([\w\-]{3,})/\$1\n/gm" allhtmlfiles.txt
+# remove last line and stack and circle classes
+perl -pi -e "s/^.*>|^stack.*\n|^circle\n//gm" allhtmlfiles.txt
+# remove repeat classes
+sort allhtmlfiles.txt | uniq > allfaicons.txt
+# clean first line
+perl -pi -e 's/^ \n//gm' allfaicons.txt
+# join whith pipeline
+perl -pi -e "s/\n/\|/gm" allfaicons.txt
+# clean last character
+perl -pi -e 's/\|$//gm' allfaicons.txt
+
+"(?!PATERN).+?": \[.+?"\],?
+"(?!book|chalkboard-teacher|chart-line|chart-pie|check|check-circle|clock|cookie-bite|copyright|crosshairs|desktop|envelope|exchange-alt|facebook-f|gift|hands-helping|heart|instagram|lock|paint-brush|paper-plane|pen|phone|quote-left|quote-right|shield-alt|square-root-alt|times-circle|trophy|user|wallet|whatsapp).+?": \[.+?"\],?
+
+
+
+
+
+
+
 ```
 
 ## Deploy
@@ -102,7 +157,7 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- Botones flotantes
+- smoth scroll safary en enlaces con has
 - estilos if varios autores
 - Página servicios independiente
 - limpiar memoirs

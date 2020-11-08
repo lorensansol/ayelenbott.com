@@ -7,6 +7,7 @@ const navLink = document.querySelectorAll('.nav-link')
 // Navbar burguer click
 burger && burger.addEventListener('click', () => {
   burgerTarget.classList.toggle('collapse')
+  burger.classList.toggle('active')
   navbar.classList.toggle('navbar-transparent')
 })
 
@@ -14,6 +15,7 @@ burger && burger.addEventListener('click', () => {
 navbar && navbar.addEventListener('click', e => {
   if (e.target.classList.contains('nav-link') && window.innerWidth < 992) {
     burgerTarget.classList.add('collapse')
+    burger.classList.remove('active')
     navbar.classList.add('navbar-transparent')
   }
 })
