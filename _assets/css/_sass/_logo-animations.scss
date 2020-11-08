@@ -49,6 +49,11 @@ header#aye {
   .badge    { animation: puff-in-hor 0.7s 5.5s both; }
   .btn     { animation: puff-in-hor 0.7s 6.5s both; }
 }
+header#clases {
+  #profesora    { animation: puff-in-hor 0.7s 1s both; }
+  .badge    { animation: puff-in-hor 0.7s 2s both; }
+  .btn     { animation: puff-in-hor 0.7s 3s both; }
+}
 
 // Keyframes
 @keyframes cut {

@@ -1,9 +1,10 @@
 section#proyectos.bg-secondary
   .container
-    h2.h1.text-primary.text-uppercase Proyectos
-    p.lead ¡Pasión en acción!
+    div(data-showup)
+      h2.h1.text-primary.text-uppercase Proyectos
+      p.lead ¡Pasión en acción!
     .row
-      .col-sm.d-flex.flex-column.my-4.my-sm-0
+      .col-sm.d-flex.flex-column.my-4.my-sm-0(data-showup)
         //- .d-inline-block.rounded-circle.bg-primary.p-4
           i.fa.fa-fw.fa-3x.fa-cog
         //- img.img-fluid.mt-4(data-src='/assets/img/servicios/rueda-conocimiento.svg' alt='la rueda del conocimiento' width='1036' height='567')
@@ -82,7 +83,7 @@ section#proyectos.bg-secondary
                     i.fa.fa-lg.text-secondary.fa-paper-plane
                     |  Contacto
                   button.btn.btn-lg.btn-secondary.m-1(type='button' data-dismiss='modal') ✖ Cerrar
-      .col-sm.d-flex.flex-column
+      .col-sm.d-flex.flex-column(data-showup)
         //- .d-inline-block.rounded-circle.bg-primary.p-4
           i.fa.fa-fw.fa-3x.fa-pen
         img.img-fluid.mt-4(data-src='/assets/img/servicios/blogging.svg' alt='blogging' width='1036' height='567')

@@ -1,6 +1,6 @@
 ---
 layout: servicios
-title: '🥇 Clases particulares de Matemáticas, Estadística y Finazas'
-description: llll➤ Clases Particulares de Matemáticas, Estadística y Finazas 【Presenciales y Online】 🥇 by Ayelén Bott 🥇 Formación Universitaria ✅ Capacitación Empresarial ✅ Contacta sin compromiso.
+title: '🥇 Profesora de Clases Particulares de Matemáticas Online'
+description: llll➤ Profesora de Clases Particulares Online ✅ de Matemáticas, Estadística y Finanzas 🥇 Formación Universitaria y Capacitación Empresarial.
 sitemap: true
 ---

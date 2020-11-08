@@ -9,11 +9,12 @@ html(lang="es")
     {% include head.html %}
     {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
   body#top(class='{{ layout }}')
-    include includes/nav.pug
-    include includes/header.pug
+    include includes/nav-clases.pug
+    include includes/header-clases.pug
     main.text-center
-      include includes/sobre.pug
-      include includes/servicios.pug
+      include includes/formacion-universitaria.pug
+      include includes/capacitacion-empresarial.pug
+      include includes/sobre-clases.pug
       include includes/testimonios.pug
       include includes/contacto.pug
   .

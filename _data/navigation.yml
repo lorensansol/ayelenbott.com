@@ -19,7 +19,8 @@
   link: /#sobre
   fa: user
 - name: Servicios
-  link: /#servicios
+  link: /servicios
+  onclick: true
   fa: chalkboard-teacher
 - name: Proyectos
   link: /#proyectos

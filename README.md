@@ -159,7 +159,6 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 - smoth scroll safary en enlaces con has
 - estilos if varios autores
-- Página servicios independiente
 - limpiar memoirs
 - windows ayelen
   - font din

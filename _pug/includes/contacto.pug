@@ -1,6 +1,6 @@
 section#contacto.bg-secondary.bg-bott
   .container
-    h2.h1.text-white.text-uppercase.mb-5 Contacto
+    h2.h1.text-white.text-uppercase.mb-5(data-showup) Contacto
     //- p.lead ¡Con gusto atenderé tu consulta!
     //- p
       i.fa.fa-fw.fa-calendar.text-primary
@@ -12,23 +12,23 @@ section#contacto.bg-secondary.bg-bott
       i.fa.fa-fw.fa-map-marker-alt.text-primary
       |  San Carlos de Bariloche, Río Negro
     //- p.text-light.mb-4 Contacta sin compromiso. Puedes hacerlo mediante WhatsApp o email tocando el botón correspondiente<!--, o también mediante el formulario de contacto-->. Te responderemos lo antes posible.
-    p
+    p(data-showup)
       a.btn.btn-primary.btn-lg(href='https://api.whatsapp.com/send?phone=542944917110' target='_blank' title='¡Pulsa y envia un WhatsApp!')
         i.fab.fa-whatsapp.fa-lg.text-secondary
         |  +54 294 4917110
-    p
+    p(data-showup)
       a.btn.btn-outline-light.btn-lg(href='tel:+542944917110' title='¡Pulsa y llama!')
         i.fa.fa-phone.fa-lg.text-primary
         |  +54 294 4917110
-    p
+    p(data-showup)
       a.btn.btn-light.text-secondary(href!='&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;{{site.email}}' title='¡Pulsa y envia un email!')
         i.fa.fa-envelope.fa-lg.text-primary
         |  {{site.email}}
-    p
+    p(data-showup)
       a.btn.btn-primary.btn-lg(href='https://www.instagram.com/ayelenbott/' target='_blank' title='Instagram')
         i.fab.fa-lg.fa-instagram.text-secondary
         |  ayelenbott
-    p
+    p(data-showup)
       a.btn.btn-outline-light.btn-lg(href='https://www.facebook.com/ayelenbott' target='_blank' title='Facebook')
         i.fab.fa-lg.fa-facebook-f.text-primary
         |  ayelenbott
