@@ -17,8 +17,10 @@ faElements.forEach(i => {
   svgIcon.classList.add(`fa-w-${icons[faIconName][0]/icons[faIconName][1]*16}`)
   // create path clid
   let pathSvgIcon = document.createElement('PATH')
-  // add path attribute
+  // add d path attribute
   pathSvgIcon.setAttribute('d', icons[faIconName][4])
+  // add fill path attribute
+  pathSvgIcon.setAttribute('fill', 'currentColor')
   // add child path to svg
   svgIcon.appendChild(pathSvgIcon)
   // add svg near i.fa element
