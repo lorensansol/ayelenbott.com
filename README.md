@@ -55,7 +55,7 @@ terser _site/_assets/js/lunr.js --comments false --output assets/js/lunr.js
 purgecss --css _site/_assets/css/styles.css --content _site/**/*.html,_site/assets/js/*.js --output assets/css/
 
 # remove css comments
-perl -pi -e "s[/\*.*\*/][]gi" assets/css/styles.css
+perl -pie "s[/\*.*\*/][]gi" assets/css/styles.css
 ```
 
 ### Gulp
@@ -75,8 +75,27 @@ Optimice assets with gulp (in parent directory):
   - compress
 
 ```bash
-# gulp parent directory
-cd ../
+# create an optimal used-icons.json with all the fontawesome used icons
+# used fa icons
+## fin all html files
+## xargs: in each
+## grep: get fa icons by regex
+## sort
+## unique
+## perl: regex replace
+### remove prefix, stack and circle icons
+### join with pipeline
+### clean last
+usedFaIcons=`find _site -type f -iname "*.html" | xargs grep -Eoh "fa-(\w|-){3,}" | sort | uniq | perl -pe "s/^fa-//gm" | perl -pe "s/^stack.*\n|^circle\n//gm" | perl -pe "s/\n/|/gm" | perl -pe "s/\|$//gm"`
+# fa custom js file
+## cat: concatenate fa js files with icons (brands and solid)
+## grep: filter only used fa icons
+## perl: add finish comma by regex replace
+## sed: add "{" in first line
+## sed: add "}" in last line
+## save as used-icons.json
+cat _assets/js/_includes/fontawesome/{brands,solid}.js | grep -Eo "^\s{4}\"($usedFaIcons)\".+" | perl -pe "s/\]$/\],/gm" | sed '1s/^/{\'$'\n/g' | sed '$s/,$/}/g' > _assets/js/_includes/fontawesome/used-icons.json
+
 ## minify js files
 cd ../;gulp js_ayelenbott.com;cd ayelenbott.com
 ## critical css
@@ -87,63 +106,6 @@ cd ../;gulp css_ayelenbott.com;cd ayelenbott.com
 cd ../;gulp img_ayelenbott.com;cd ayelenbott.com
 ## compress fonts
 cd ../;gulp fonts2_ayelenbott.com;cd ayelenbott.com
-## return to proyect directory
-cd ayelenbott.com
-
-
-
-cd Downloads/DIR/
-
-_site/**/*.html
-# 
-'<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg">' '</svg>'
-
-
-# inline
-perl -pi -e "s/\n/\ /gm" *.svg
-
-perl -pi -e "s/(<symbol|<\/svg>)/\$1/gm" *.svg
-
-(<symbol|<\/svg>)
-
-# 
-echo '<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg">' > fa.txt
-cat *.svg >> fa.txt
-echo '</svg>' >> fa.txt
-
-
-# Concatenate HTML files
-cat *.html > allhtmlfiles.txt
-
-cat brands.min.js solid.min.js fontawesome.min.js > fa-custom.min.js
-
-
-# Concatenate HTML files
-cat *.html > allhtmlfiles.txt
-# inline
-perl -pi -e "s/\n/\ /gm" allhtmlfiles.txt
-# get fontawesome classes
-perl -pi -e "s/.*?fa-([\w\-]{3,})/\$1\n/gm" allhtmlfiles.txt
-# remove last line and stack and circle classes
-perl -pi -e "s/^.*>|^stack.*\n|^circle\n//gm" allhtmlfiles.txt
-# remove repeat classes
-sort allhtmlfiles.txt | uniq > allfaicons.txt
-# clean first line
-perl -pi -e 's/^ \n//gm' allfaicons.txt
-# join whith pipeline
-perl -pi -e "s/\n/\|/gm" allfaicons.txt
-# clean last character
-perl -pi -e 's/\|$//gm' allfaicons.txt
-
-"(?!PATERN).+?": \[.+?"\],?
-"(?!book|chalkboard-teacher|chart-line|chart-pie|check|check-circle|clock|cookie-bite|copyright|crosshairs|desktop|envelope|exchange-alt|facebook-f|gift|hands-helping|heart|instagram|lock|paint-brush|paper-plane|pen|phone|quote-left|quote-right|shield-alt|square-root-alt|times-circle|trophy|user|wallet|whatsapp).+?": \[.+?"\],?
-
-
-
-
-
-
-
 ```
 
 ## Deploy
@@ -157,7 +119,6 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- smoth scroll safary en enlaces con has
 - estilos if varios autores
 - limpiar memoirs
 - windows ayelen

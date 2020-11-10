@@ -4,24 +4,26 @@ section#servicios.bg-primary
       .col-md-5.col-lg-4.order-md-2(data-showup)
         .d-table.m-auto.text-left
           h2.h1.text-uppercase Servicios
-          .lead.m-0
-            p
-              i.fa.fa-fw.mr-1
+          ul.fa-ul.lead.ml-5
+            li.mb-2
+              span.fa-li
               |  Aprendé
-            p
-              i.fa.fa-fw.text-secondary.mr-1.fa-square-root-alt
+            li.mb-2
+              span.fa-li
+                i.fa.fa-fw.text-secondary.fa-square-root-alt
               |  Matemáticas
-            p
-              i.fa.fa-fw.text-secondary.mr-1.fa-chart-pie
+            li.mb-2
+              span.fa-li
+                i.fa.fa-fw.text-secondary.fa-chart-pie
               |  Estadística
-            p
-              i.fa.fa-fw.text-secondary.mr-1.fa-chart-line
+            li.mb-2
+              span.fa-li
+                i.fa.fa-fw.text-secondary.fa-chart-line
               |  Finanzas
           a.btn.btn-lg.btn-secondary.w-100(href='/servicios') ✚ Más
       .col-sm.order-md-1.mt-5.mt-md-0(data-showup)
         img.img-fluid(data-src='/assets/img/servicios/formacion.svg' alt='formacion universitaria' width='983' height='803')
         h3.h4.text-white.text-uppercase.mt-3 Formación Universitaria
-        //- a.btn.btn-lg.btn-secondary(href='/servicios#universitaria') ✚ Más
         a.btn.btn-lg.btn-secondary(data-toggle='modal' href='/servicios#formacion-universitaria') ✚ Más
         //- .modal#formacion-universitaria(tabindex='-1' role='dialog' aria-hidden='true')
           .modal-dialog.modal-lg(role='document')
@@ -107,7 +109,6 @@ section#servicios.bg-primary
       .col-sm.order-md-3.mt-5.mt-md-0(data-showup)
         img.img-fluid(data-src='/assets/img/servicios/capacitacion.svg' alt='capacitacion empresarial' width='983' height='803')
         h3.h4.text-white.text-uppercase.mt-3 Capacitación Empresarial
-        //- a.btn.btn-lg.btn-secondary(href='/servicios#empresarial') ✚ Más
         a.btn.btn-lg.btn-secondary(data-toggle='modal' href='/servicios#capacitacion-empresarial') ✚ Más
         //- .modal#capacitacion-empresarial(tabindex='-1' role='dialog' aria-hidden='true')
           .modal-dialog.modal-lg(role='document')

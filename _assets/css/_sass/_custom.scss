@@ -168,7 +168,20 @@ span[onclick]:not(.btn):hover {
   }
 }
 
-// Exends
+// Correct vertical-align of svg-inline--fa
+.svg-inline--fa {
+  vertical-align: 0;
+  &.fa-lg {
+    vertical-align: bottom;
+  }
+}
+// Height in Font Awesome icons with fixed width and background rounded (like fa-stack)
+[class*="rounded"] > .fa-fw {
+  line-height: 1.25em !important;
+  height: 1.25em !important;
+}
+
+// Extends
 @media screen and (min-width: 992px) {
   .w-lg-100 {
     width: 100%;
