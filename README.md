@@ -83,10 +83,11 @@ Optimice assets with gulp (in parent directory):
 ## sort
 ## unique
 ## perl: regex replace
-### remove prefix, stack and circle icons
+### remove fa- prefix
+### remove stack
 ### join with pipeline
 ### clean last
-usedFaIcons=`find _site -type f -iname "*.html" | xargs grep -Eoh "fa-(\w|-){3,}" | sort | uniq | perl -pe "s/^fa-//gm" | perl -pe "s/^stack.*\n|^circle\n//gm" | perl -pe "s/\n/|/gm" | perl -pe "s/\|$//gm"`
+usedFaIcons=`find _site -type f -iname "*.html" | xargs grep -Eoh "fa-(\w|-){3,}" | sort | uniq | perl -pe "s/^fa-//gm" | perl -pe "s/^stack.*\n//gm" | perl -pe "s/\n/|/gm" | perl -pe "s/\|$//gm"`
 # fa custom js file
 ## cat: concatenate fa js files with icons (brands and solid)
 ## grep: filter only used fa icons
