@@ -11,6 +11,8 @@ faElements.forEach(i => {
   let svgIcon = document.createElement('SVG')
   // add attribute viewBox
   svgIcon.setAttribute('viewBox', `0 0 ${icons[faIconName][0]} ${icons[faIconName][1]}`)
+  // add attribute xmlns
+  svgIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
   // recoveri classes
   svgIcon.classList.value = faIconClasses
   // add fa width class
