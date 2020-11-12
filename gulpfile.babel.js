@@ -2,7 +2,7 @@
 const devMode = false
 
 // Common
-import fs from 'fs'
+// import fs from 'fs'
 import child from 'child_process'
 import gulp from 'gulp'
 // import concat from 'gulp-concat'
@@ -143,7 +143,7 @@ gulp.task('fonts', (done) => {
       // css: '_assets/css/_sass/fonts',
       dest: 'assets/fonts',
     }))
-  child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
+  // child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
   done()
 })
 
