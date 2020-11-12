@@ -156,9 +156,6 @@ gulp.task('fo', gulp.series(
         // css: '_assets/css/_sass/fonts',
         dest: 'assets/fonts',
       }))
-  },
-  () => {
-    return child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
   }
 ))
 
