@@ -30,8 +30,11 @@ $enable-rounded: true;
 $border-radius: 0.5rem;
 $btn-type-pill: true;
 
-@import 'bootstrap/bootstrap';
-@import 'svg-with-js';
+@import 'fonts/alegreya';
+@import 'fonts/brandon';
+@import 'fonts/din';
+@import '../../../node_modules/bootstrap-scss/bootstrap';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js';
 @import 'memoirs';
 @import 'smooth-scroll';
 @import 'cookies-message';

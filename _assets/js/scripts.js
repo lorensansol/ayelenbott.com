@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% include_relative _includes/fontawesome-custom.js %}
+{% include_relative _includes/fa-min.js %}
 {% include_relative _includes/cookies-message.js %}
 {% include_relative _includes/load-script.js %}
 {% include_relative _includes/load-style.js %}

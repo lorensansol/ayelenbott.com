@@ -80,29 +80,22 @@ b, strong {
 }
 
 // buttons 3d
-// .btn {
-//   border: 0 0 .25rem rgba(0, 0, 0, .25) solid !important;
-//   // transition: all .2s;
-//   &:hover {
-//     border: .25rem 0 0 rgba(0, 0, 0, .25) solid !important;
-//   }
-// }
-
-// buttons 3d
 .btn {
   border-color: rgba($black, .25) !important;
   border-width: 0 0 .25rem;
-  transition: all .1s !important;
+  box-shadow: 0 1px 0 1px rgba($black, .07);
+  transition: all .1s, bottom .5s, opacity .5s !important;
   &:hover {
     border-color: rgba($black, .3);
     border-width: .25rem 0 0;
+    box-shadow: none;
   }
   &:focus {
     border-color: rgba($black, .35) !important;
     box-shadow: inherit !important;
   }
   &[class*="outline"] {
-    border-color: $light !important;
+    // border-color: $light !important;
     border-width: 1px 1px .25rem;
     &:hover {
       border-width: .25rem 1px 1px;

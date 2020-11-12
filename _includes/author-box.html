@@ -1,6 +1,6 @@
 <!-- Author Box -->
-{% if site.authorbox %}
-<div class="row authorbox align-items-center">
+{% if site.author_box %}
+<div class="row author-box align-items-center">
   <div class="col-md-2 pb-4 pb-md-0">
     {% if author.avatar %}
       {% if jekyll.environment == "production" %}
@@ -14,7 +14,7 @@
   </div>
   <div class="col-md-10">
     {% if author.name %}
-      {% if site.author-links %}
+      {% if site.author_links %}
         {% if author.web %}
           {% if author.web contains "://" %}
             <a class="text-dark h4" onclick="window.open('{{ author.web }}','_blank')">Sobre {{ author.name }}</a>

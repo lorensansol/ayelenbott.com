@@ -1,8 +1,8 @@
 <style>
-{% if page.url == '/' %}
+{% if page.layout == 'index' or page.layout == 'servicios' %}
   {% include critical-path-css/critical-index.css %}
 {% else %}
-  {% if page.collection == 'posts' or page.collection == 'pages' %}
+  {% if page.layout == 'post' or page.layout == 'page' %}
     {% include critical-path-css/critical-posts.css %}
   {% else %}
     {% include critical-path-css/critical-bloglist.css %}

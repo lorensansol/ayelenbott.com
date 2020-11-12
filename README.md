@@ -106,7 +106,7 @@ cd ../;gulp css_ayelenbott.com;cd ayelenbott.com
 ## compress img
 cd ../;gulp img_ayelenbott.com;cd ayelenbott.com
 ## compress fonts
-cd ../;gulp fonts2_ayelenbott.com;cd ayelenbott.com
+cd ../;gulp fonts3_ayelenbott.com;cd ayelenbott.com
 ```
 
 ## Deploy
@@ -120,6 +120,12 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
+- fonts dirs
+- probar tareas gulp
+- bg-bott
+
+- fa en sprite min
+- data-showup escalonado
 - estilos if varios autores
 - limpiar memoirs
 - windows ayelen

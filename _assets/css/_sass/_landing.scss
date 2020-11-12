@@ -56,15 +56,17 @@ header#clases {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   .badge {
-    font-size: 1rem;
+    font-size: inherit;
     border: 1px $white solid;
   }
 }
 html {
   height: -webkit-fill-available;
 }
-header#clases .btn {
-  min-width: 190px;
+header#clases {
+  .btn {
+    min-width: 190px;
+  }
 }
 .bg-bott {
   // background-image: url(/assets/img/servicios/fondo.svg);

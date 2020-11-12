@@ -25,7 +25,7 @@ post_class: post-template
       </div>
       <div>
         {% if author.name %}
-          {% if site.author-links %}
+          {% if site.author_links %}
             {% if author.web %}
               {% if author.web contains "://" %}
                 <a class="font-weight-bold text-dark ml-2" onclick="window.open('{{ author.web }}','_blank')">{{ author.name }}</a>

@@ -1,7 +1,7 @@
 # Site
 name: 'Ayelén Bott'
 title: 'Ayelén Bott'
-description: 'Matemáticas, Estadística y Finazas'
+description:
 url: https://ayelenbott.com
 baseurl: ''
 logo: /assets/img/logo.png
@@ -14,11 +14,12 @@ email: '&#x61;&#x79;&#x65;&#x6C;&#x65;&#x6E;&#x62;&#x6F;&#x74;&#x74;&#x61;&#x72;
 disqus: 'ayelenbott'
 lang: es
 permalink: /:title
-authorbox: true
-author-links: true
+author_box: true
+author_links: true
 search: true
-lazy-load-comments: false # if not, comments load when clic
-critical-path-css: true
+lazyload_comments: false # if not, comments load when clic
+critical_path_css: true
+google_fonts: # 'Alegreya:ital,wght@0,400;1,700&family=Nothing+You+Could+Do&family=Permanent+Marker'
 
 # Authors
 authors:
@@ -68,7 +69,17 @@ compress_html:
     envs: [development]
 
 # Exclude
-exclude: [README.md, Gemfile, Gemfile.lock, _pug, google7467d923cbb3eb4c.html]
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - google7467d923cbb3eb4c.html
+  - node_modules
+  - _pug
+  - fonts.list
+  - gulpfile.babel.js
+  - package.json
+  - package-lock.json
 
 # Defaults values
 defaults:

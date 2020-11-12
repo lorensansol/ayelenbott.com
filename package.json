@@ -1,0 +1,34 @@
+{
+  "name": "ayelenbott.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "git add .;git commit -m \"Actualización: `date +'%Y-%m-%d %H:%M:%S'`\";git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/register": "*",
+    "autoprefixer": "*",
+    "critical": "*",
+    "cssnano": "*",
+    "gulp": "*",
+    "gulp-babel": "*",
+    "gulp-fontgen": "*",
+    "gulp-google-webfonts": "*",
+    "gulp-imagemin": "*",
+    "gulp-postcss": "*",
+    "gulp-pug": "*",
+    "gulp-purgecss": "*",
+    "gulp-run-command": "*",
+    "gulp-terser": "*",
+    "prismjs": "*"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "*",
+    "bootstrap-scss": "*"
+  },
+  "description": ""
+}

@@ -5,9 +5,7 @@
   
 doctype html
 html(lang="es")
-  .
-    {% include head.html %}
-    {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+  | {% include head.html %}
   body#top(class='{{ layout }}')
     include includes/nav.pug
     include includes/header.pug
@@ -21,5 +19,4 @@ html(lang="es")
   .
     {% include footer.html %}
     {% include btn-callnow.html %}
-    {% include schema.html %}
   .d-md-none.pb-4.bg-white

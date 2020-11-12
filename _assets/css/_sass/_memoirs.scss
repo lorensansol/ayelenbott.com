@@ -303,7 +303,7 @@ img, img:hover {
 }
 
 // blog 
-.layout-post .sitetag, .entry-header, .article-post, .authorbox , .comments {
+.layout-post .sitetag, .entry-header, .article-post, .author-box , .comments {
   max-width: 740px;
   padding-left: 20px;
   padding-right: 20px;
@@ -332,7 +332,7 @@ img, img:hover {
       padding:2px;
   }
 }
-.authorbox {
+.author-box {
   margin-top:50px;
   margin-bottom:50px;
   .author-description {
@@ -483,7 +483,7 @@ img, img:hover {
           width: 170px;
       }
   }
-  .layout-post .sitetag, .entry-header, .article-post, .authorbox , .comments { 
+  .layout-post .sitetag, .entry-header, .article-post, .author-box , .comments { 
       padding-left:0;
       padding-right:0;
   }
