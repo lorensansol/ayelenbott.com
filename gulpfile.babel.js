@@ -135,7 +135,7 @@ gulp.task('fa-min',
   run(`cat node_modules/@fortawesome/fontawesome-free/js/{brands,solid}.js | grep -Eo "^\s{4}\"($usedFaIcons)\".+" | perl -pe "s/\]$/\],/gm" | sed '1s/^/{\'$'\n/g' | sed '$s/,$/}/g' > _assets/js/_includes/fa-used.json`)
 )
 
-gulp.task('fonts', (done) => {
+gulp.task('fonts', () => {
   return gulp
     .src('_assets/fonts/*.{ttf,otf}')
     .pipe(fontgen({
