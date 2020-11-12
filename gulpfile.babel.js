@@ -2,7 +2,7 @@
 const devMode = false
 
 // Common
-// import fs from 'fs'
+import fs from 'fs'
 import child from 'child_process'
 import gulp from 'gulp'
 // import concat from 'gulp-concat'
@@ -135,7 +135,7 @@ gulp.task('fa-min',
   run(`cat node_modules/@fortawesome/fontawesome-free/js/{brands,solid}.js | grep -Eo "^\s{4}\"($usedFaIcons)\".+" | perl -pe "s/\]$/\],/gm" | sed '1s/^/{\'$'\n/g' | sed '$s/,$/}/g' > _assets/js/_includes/fa-used.json`)
 )
 
-gulp.task('fonts', () => {
+gulp.task('fonts', (done) => {
   return gulp
     .src('_assets/fonts/*.{ttf,otf}')
     .pipe(fontgen({
@@ -144,8 +144,23 @@ gulp.task('fonts', () => {
       dest: 'assets/fonts'
     }))
   // child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
-  // done()
+  done()
 })
+
+gulp.task('fo', gulp.series(
+  () => {
+    return gulp
+      .src('_assets/fonts/*.{ttf,otf}')
+      .pipe(fontgen({
+        css_fontpath: '/assets/fonts',
+        // css: '_assets/css/_sass/fonts',
+        dest: 'assets/fonts',
+      }))
+  },
+  () => {
+    return child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
+  }
+))
 
 gulp.task('gfonts', () => {
   return gulp

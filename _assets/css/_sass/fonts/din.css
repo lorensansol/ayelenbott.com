@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "DINNextLTPro-Regular";
+    src: url("/assets/fonts/din.eot");
+    src: url("/assets/fonts/din.eot?#iefix") format("embedded-opentype"),
+         url("/assets/fonts/din.woff2") format("woff2"),
+         url("/assets/fonts/din.woff") format("woff"),
+         url("/assets/fonts/din.ttf") format("ttf"),
+         url("/assets/fonts/din.svg#DINNextLTPro-Regular") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}
