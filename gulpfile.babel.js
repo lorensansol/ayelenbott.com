@@ -141,7 +141,7 @@ gulp.task('fonts', (done) => {
     .pipe(fontgen({
       css_fontpath: '/assets/fonts',
       // css: '_assets/css/_sass/fonts',
-      dest: 'assets/fonts',
+      dest: 'assets/fonts'
     }))
   // child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
   // done()
