@@ -137,16 +137,7 @@ gulp.task('fa-min',
 
 gulp.task('fonts',
   () => {
-    return gulp
-      .src('_assets/fonts/*.{ttf,otf}')
-      .pipe(fontgen({
-        css_fontpath: '/assets/fonts',
-        // css: '_assets/css/_sass/fonts',
-        dest: 'assets/fonts',
-      }))
-  },
-  () => {
-    return child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
+    return console.log('hola')
   }
 )
 
