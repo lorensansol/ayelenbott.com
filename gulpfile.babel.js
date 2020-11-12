@@ -147,7 +147,7 @@ gulp.task('fonts', (done) => {
   done()
 })
 
-gulp.task('fo', gulp.series(
+gulp.task('fon', gulp.series(
   () => {
     return gulp
       .src('_assets/fonts/*.{ttf,otf}')
