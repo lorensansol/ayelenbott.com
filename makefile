@@ -76,4 +76,4 @@ fa-min:
 		sed '1s/^/{\'$$'\n/g' | \
 		sed '$$s/,$$/}/g' > \
 		$${PATH_FA_USED_JSON} ;\
-	[ -s ${PATH_FA_USED_JSON} ] || echo "null" > ${PATH_FA_USED_JSON}
+	[ -s $${PATH_FA_USED_JSON} ] || echo "null" > $${PATH_FA_USED_JSON}
