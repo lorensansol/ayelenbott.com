@@ -11,7 +11,7 @@
     "@babel/core": "*",
     "@babel/preset-env": "*",
     "@babel/register": "*",
-    "autoprefixer": "*",
+    "autoprefixer": "^10.0.2",
     "critical": "*",
     "cssnano": "*",
     "gulp": "*",
@@ -19,14 +19,15 @@
     "gulp-fontgen": "*",
     "gulp-google-webfonts": "*",
     "gulp-imagemin": "*",
-    "gulp-postcss": "*",
+    "gulp-postcss": "^9.0.0",
     "gulp-pug": "*",
-    "gulp-purgecss": "*",
+    "gulp-purgecss": "^3.0.0",
     "gulp-terser": "*",
+    "postcss": "^8.1.7",
     "prismjs": "*"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "*",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap-scss": "*"
   },
   "description": ""
