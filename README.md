@@ -120,14 +120,10 @@ git add .;git commit -m "Update: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- deploy
-- smooth scroll in onclick links
 - probar tareas gulp
+- smooth scroll in onclick links
 - bg-bott
 - fa en sprite min
 - data-showup escalonado
 - estilos if varios autores
 - limpiar memoirs
-- windows ayelen
-  - font din
-  - no se ven btn llamar, facebook e instagram
