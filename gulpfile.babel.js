@@ -134,9 +134,13 @@ gulp.task('rest', () => {
     .pipe(gulp.dest('assets/js'))
 })
 
+gulp.task('build', () => child.exec('make build') )
+
 gulp.task('all', gulp.series('img', 'fonts', 'gfonts', 'rest', 'html', 'fa-min', 'js', 'css', 'critical'))
 
-gulp.task('up', gulp.series('html', () => child.exec('make build'), 'fa-min', () => child.exec('make build'), 'js', 'css', 'critical', () => child.exec('make deploy') ))
+gulp.task('jcc', gulp.series('js', 'css', 'critical'))
+
+gulp.task('up', gulp.series('html', 'build', 'fa-min', 'build', 'js', 'css', 'critical', () => child.exec('make deploy') ))
 
 gulp.task('default', () => {
   gulp.watch('_pug/*.pug', gulp.series('html'))

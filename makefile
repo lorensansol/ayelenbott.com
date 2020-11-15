@@ -25,15 +25,19 @@ deploy:
 	git commit -m "Update: `date +\'%Y-%m-%d %H:%M:%S\'`" ;\
 	git push
 
-# build and deploy with date now
+# on server runing, create production resources and deploy
+onserverup:
+	make fa-min ;\
+	gulp jcc ;\
+	make deploy
+
+# build and deploy
 up:
 	gulp html ;\
 	make build ;\
 	make fa-min ;\
 	make build ;\
-	gulp js ;\
-	gulp css ;\
-	gulp critical ;\
+	gulp jcc ;\
 	make deploy
 
 #	create an optimal used-icons.json with all the fontawesome used icons
