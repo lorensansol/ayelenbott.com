@@ -15,26 +15,28 @@ $dark: $negro;
 $danger: $rojo;
 
 // Fonts
-// font-family: 'Alegreya', serif;
-// font-family: 'Brandon', sans-serif;
-// font-family: 'Din', sans-serif;
-// font-family: 'Nothing You Could Do', cursive;
-// font-family: 'Permanent Marker', cursive;
-$font-family-sans-serif: 'Din', sans-serif;
-$headings-font-family: 'Brandon', sans-serif;
-$leads-font-family: 'Alegreya', serif;
 $enable-responsive-font-sizes: true;
+// font-family: "DINNextLTPro-Regular", sans-serif;
+// font-family: "BrandonGrotesque-Black", sans-serif;
+// font-family: "Alegreya-BoldItalic", serif;
+$leads-font-family: "Alegreya-BoldItalic", serif;
+$headings-font-family: "BrandonGrotesque-Black", sans-serif;
+$font-family-sans-serif: "DINNextLTPro-Regular", sans-serif;
+$leads-font-family-style: normal;
+$headings-font-family-style: normal;
+$font-family-sans-serif-style: normal;
+$leads-font-family-weight: 700;
+$headings-font-family-weight: 900;
+$font-family-sans-serif-weight: regular;
 
 // Other
 $enable-rounded: true;
 $border-radius: 0.5rem;
 $btn-type-pill: true;
 
-@import 'fonts/alegreya';
-@import 'fonts/brandon';
-@import 'fonts/din';
 @import '../../../node_modules/bootstrap-scss/bootstrap';
 @import '../../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js';
+@import 'custom-fonts';
 @import 'memoirs';
 @import 'smooth-scroll';
 @import 'cookies-message';

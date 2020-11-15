@@ -18,7 +18,7 @@ layout: compress
       <!-- Site Logo/Name -->
 
       {% if page.url == '/blog/' %}<h1 class="sitetag">{% else %}<div class="sitetag">{% endif %}
-        <a href="/blog/">
+        <a href="{{ site.baseurl }}/blog/">
           <span class="d-block h4 text-uppercase">Blog personal de </span>
           <span class="d-block lead">Ayelén Bott</span>
         </a>
@@ -26,7 +26,7 @@ layout: compress
 
       {% if paginator.page > 1 %}
         <h1 class="sitetag">
-          <a class="text-secondary" href="/blog/">Página {{paginator.page}} de {{paginator.total_pages}}</a>
+          <a class="text-secondary" href="{{ site.baseurl }}/blog/">Página {{paginator.page}} de {{paginator.total_pages}}</a>
         </h1>
       {% endif %}
 

@@ -7,8 +7,8 @@ section#proyectos.bg-secondary
       .col-sm.d-flex.flex-column.my-4.my-sm-0(data-showup)
         //- .rounded-circle.bg-primary.d-inline-block.p-3
           i.fa.fa-fw.fa-3x.fa-cog
-        //- img.img-fluid.mt-4(data-src='/assets/img/servicios/rueda-conocimiento.svg' alt='la rueda del conocimiento' width='1036' height='567')
-        img.img-fluid.mt-4(data-src='/assets/img/servicios/reading.svg' alt='reading' width='1036' height='567')
+        //- img.img-fluid.mt-4(data-src='{{ site.baseurl }}/assets/img/servicios/rueda-conocimiento.svg' alt='la rueda del conocimiento' width='1036' height='567')
+        img.img-fluid.mt-4(data-src='{{ site.baseurl }}/assets/img/servicios/reading.svg' alt='reading' width='1036' height='567')
         h3.text-white.mt-3 La Rueda del Conocimiento
         a.btn.btn-lg.btn-primary.mx-auto.mt-auto(data-toggle='modal' href='#la-rueda-del-conocimiento') ✚ Más
         .modal#la-rueda-del-conocimiento(tabindex='-1' role='dialog' aria-hidden='true')
@@ -82,6 +82,6 @@ section#proyectos.bg-secondary
       .col-sm.d-flex.flex-column(data-showup)
         //- .rounded-circle.bg-primary.d-inline-block.p-3
           i.fa.fa-fw.fa-3x.fa-pen
-        img.img-fluid.mt-4(data-src='/assets/img/servicios/blogging.svg' alt='blogging' width='1036' height='567')
+        img.img-fluid.mt-4(data-src='{{ site.baseurl }}/assets/img/servicios/blogging.svg' alt='blogging' width='1036' height='567')
         h3.text-white.mt-3 Blogging
-        a.btn.btn-lg.btn-primary.mx-auto.mt-auto(href='/blog/') ✚ Más
+        a.btn.btn-lg.btn-primary.mx-auto.mt-auto(href='{{ site.baseurl }}/blog/') ✚ Más

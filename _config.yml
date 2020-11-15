@@ -8,7 +8,7 @@ logo: /assets/img/logo.png
 favicon: /favico.ico
 google_analytics: G-DVLW394645
 google_site_verification: 'kOIAxDc84xeslw4EgwFjG_LDka0qLKXFKz2ZrJtO--w'
-# google_adsense: "ca-pub-xxxxxxxxxxxxxxxx"
+# google_adsense: 'ca-pub-xxxxxxxxxxxxxxxx'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 email: '&#x61;&#x79;&#x65;&#x6C;&#x65;&#x6E;&#x62;&#x6F;&#x74;&#x74;&#x61;&#x72;&#x69;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;'
 disqus: 'ayelenbott'
@@ -80,6 +80,7 @@ exclude:
   - gulpfile.babel.js
   - package.json
   - package-lock.json
+  - makefile
 
 # Defaults values
 defaults:

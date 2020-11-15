@@ -25,8 +25,8 @@ document.addEventListener("keyup", e => e.keyCode == 27 && closeNav() );
 	// Active search.js wen clic in input
 	const lunrsearch = document.getElementById('lunrsearch')
 	lunrsearch && lunrsearch.addEventListener('click', function(){
-		loadScript('{{ site.baseurl }}/_assets/js/lunr.js', function(){
-			loadScript('{{ site.baseurl }}/_assets/js/lunrsearchengine.js');
+		loadScript('{{ site.baseurl }}/assets/js/lunr.js', function(){
+			loadScript('{{ site.baseurl }}/assets/js/lunrsearchengine.js');
 		});
 	});
 {% endif %}

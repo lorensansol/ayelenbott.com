@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Title -->
   {% if paginator.page > 1 %}
     <title>Página {{paginator.page}} de {{paginator.total_pages}} | {{ site.title }}</title>
+  {% else if page.title_seo %}
+    <title>{{ page.title_seo }}</title>
   {% else %}
     <title>{{ page.title }}</title>
   {% endif %}
 
+  <!-- SEO tags without title -->
   {% seo title=false %}
 
+  <!-- Robots -->
   {% if page.sitemap == false %}
     <meta name="robots" content="noindex">
   {% endif %}
@@ -58,7 +63,7 @@
 
     <!-- CSS pretty -->
     <link rel="stylesheet" href="{{ site.baseurl }}/_assets/css/styles.css">
-
+    
     {% if site.google_fonts %}
       <!-- Google Fonts offline -->
       <link rel="stylesheet" href="{{ site.baseurl }}/_assets/gfonts/fonts.css" media="print" onload="this.media='all'">
@@ -70,21 +75,21 @@
     <!-- Prism offline (in production work with js and cdn's, here like a https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash&plugins=show-language+toolbar+copy-to-clipboard ) -->
     <link rel="stylesheet" href="{{ site.baseurl }}/node_modules/prismjs/themes/prism-tomorrow.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ site.baseurl }}/node_modules/prismjs/plugins/toolbar/prism-toolbar.css" media="print" onload="this.media='all'">
-    <script src="{{ site.baseurl }}/node_modules/prismjs/prism.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-markup.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-css.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-clike.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-javascript.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-markdown.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-bash.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/show-language/prism-show-language.min.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js" async></script>
-    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" async></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/prism.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-markup.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-css.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-clike.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-javascript.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-markdown.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/components/prism-bash.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/show-language/prism-show-language.min.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js" defer></script>
+    <script src="{{ site.baseurl }}/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" defer></script>
 
   {% endif %}
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="{{ site.baseurl }}/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/img/favicon/android-chrome-192x192.png">

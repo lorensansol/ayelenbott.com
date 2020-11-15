@@ -1,11 +1,6 @@
-// Modo Desarrollo
-const devMode = false
-
 // Common
-import fs from 'fs'
 import child from 'child_process'
 import gulp from 'gulp'
-// import concat from 'gulp-concat'
 
 // HTML
 import pug from 'gulp-pug'
@@ -16,7 +11,7 @@ import comments from 'postcss-discard-comments'
 import cssnano from 'cssnano'
 import autoprefixer from 'autoprefixer'
 import purgecss from 'gulp-purgecss'
-const critical = require('critical')
+const critical = require('critical').stream
 
 // JavaScript
 import babel from 'gulp-babel'
@@ -29,22 +24,10 @@ import imagemin from 'gulp-imagemin'
 import googleWebFonts from 'gulp-google-webfonts'
 import fontgen from 'gulp-fontgen'
 
-// SHELL
-import run from 'gulp-run-command'
-
-// jekyll install from root directory
-// gulp.task('jekyll', child.exec('gem install bundler;bundle install'))
-
-// jekyll local development server start
-// gulp.task('server', child.exec('bundle exec jekyll serve --watch --config _config.yml,_config_dev.yml'))
-
-// jekyll local production server start
-// gulp.task('server-production', child.exec('JEKYLL_ENV=production bundle exec jekyll serve --watch'))
-
 gulp.task('html', () => {
   return gulp
     .src('_pug/*.pug')
-    .pipe(pug({ pretty: devMode }))
+    .pipe(pug({ pretty: false }))
     .pipe(gulp.dest('_layouts'))
 })
 
@@ -75,23 +58,24 @@ gulp.task('css', () => {
 gulp.task('critical', (done) => {
   function criticalPathCss(htmlSrc, cssTarget){
     gulp
-      .src('_site' + htmlSrc)
+      .src('_site/' + htmlSrc)
       .pipe(
         critical({
-          base: '',
-          // inline: true,
-          // css: ['_assets/css/styles.css'],
+          base: './',
+          inline: false,
+          css: ['assets/css/styles.css'],
           target: {
-            css: '_includes/critical-path-css' + cssTarget,
-            // uncritical: 'assets/css/uncritical' + cssTarget,
+            css: '_includes/critical-path-css/' + cssTarget,
+            // html: htmlSrc.replace('.html', '-critical.html'),
+            // uncritical: 'assets/css/uncritical/' + cssTarget,
           },
-          ignore: ['@font-face', '.bg-bott', ':root'],
+          ignore: ['@font-face', ':root', '.bg-bott'],
         })
       )
   }
   criticalPathCss('index.html', 'critical-index.css')
   criticalPathCss('blog/index.html', 'critical-bloglist.css')
-  criticalPathCss('drafts/instrucciones.html', 'critical-posts.css')
+  criticalPathCss('drafts/*-instrucciones.html', 'critical-posts.css')
   done()
 })
 
@@ -112,59 +96,33 @@ gulp.task('img', () => {
 })
 
 // create an optimal fa-used.json with all the fontawesome used icons
-gulp.task('fa-min',
-  // used fa icons
-  //// fin all html files
-  //// xargs: in each
-  //// grep: get fa icons by regex
-  //// sort
-  //// unique
-  //// perl: regex replace
-  ////// remove fa- prefix
-  ////// remove stack
-  ////// join with pipeline
-  ////// clean last
-  run('usedFaIcons=`find _site -type f -iname "*.html" | xargs grep -Eoh "fa-(\w|-){3,}" | sort | uniq | perl -pe "s/^fa-//gm" | perl -pe "s/^stack.*\n//gm" | perl -pe "s/\n/|/gm" | perl -pe "s/\|$//gm"`'),
-  // fa custom js file
-  //// cat: concatenate fa js files with icons (brands and solid)
-  //// grep: filter only used fa icons
-  //// perl: add finish comma by regex replace
-  //// sed: add "{" in first line
-  //// sed: add "}" in last line
-  //// save as used-icons.json
-  run(`cat node_modules/@fortawesome/fontawesome-free/js/{brands,solid}.js | grep -Eo "^\s{4}\"($usedFaIcons)\".+" | perl -pe "s/\]$/\],/gm" | sed '1s/^/{\'$'\n/g' | sed '$s/,$/}/g' > _assets/js/_includes/fa-used.json`)
-)
+gulp.task('fa-min', () => child.exec('make fa-min') )
 
-gulp.task('fonts', (done) => {
-  return gulp
-    .src('_assets/fonts/*.{ttf,otf}')
-    .pipe(fontgen({
-      css_fontpath: '/assets/fonts',
-      // css: '_assets/css/_sass/fonts',
-      dest: 'assets/fonts'
-    }))
-  // child.exec('mv ./assets/fonts/*.css ./_assets/css/_sass/fonts/')
-  done()
-})
-
-gulp.task('fo', gulp.series(
+gulp.task('fonts', gulp.series(
+  // create json files to custom font style weight of each font
+  () => child.exec(`echo '{"style":"italic"}' > ./_assets/fonts/alegreya.json`),
   () => {
     return gulp
       .src('_assets/fonts/*.{ttf,otf}')
       .pipe(fontgen({
         css_fontpath: '/assets/fonts',
-        // css: '_assets/css/_sass/fonts',
         dest: 'assets/fonts',
       }))
-  }
+  },
+  // concatenate css files, font-display swap, save new sass file and delete old css files
+  () => child.exec(`cat ./assets/fonts/*.css | perl -p -e "s/\}/    font-display: swap;\n}\n/gm" > ./_assets/css/_sass/_custom-fonts.scss; rm ./assets/fonts/*.css`)
 ))
 
-gulp.task('gfonts', () => {
-  return gulp
-    .src('fonts.list')
-    .pipe(googleWebFonts({ fontDisplayType: 'swap' }))
-    .pipe(gulp.dest('_assets/gfonts'))
-})
+gulp.task('gfonts', gulp.series(
+  () => child.exec(`grep "google_fonts:" _config.yml | perl -pe "s/google_fonts: |'//g" | sed "s/&family=/|/" > fonts.list`),
+  () => {
+    return gulp
+      .src('fonts.list')
+      .pipe(googleWebFonts({ fontDisplayType: 'swap' }))
+      .pipe(gulp.dest('_assets/gfonts'))
+  },
+  () => child.exec(`rm fonts.list`),
+))
 
 gulp.task('rest', () => {
   return gulp
@@ -176,11 +134,9 @@ gulp.task('rest', () => {
     .pipe(gulp.dest('assets/js'))
 })
 
-gulp.task('all', gulp.series('img', 'fonts', 'gfonts', 'rest', 'html', 'fa-min', 'js', 'critical', 'css'))
+gulp.task('all', gulp.series('img', 'fonts', 'gfonts', 'rest', 'html', 'fa-min', 'js', 'css', 'critical'))
 
-gulp.task('deploy', child.exec('git add .;git commit -m "Actualización: `date +\'%Y-%m-%d %H:%M:%S\'`";git push'))
-
-gulp.task('up', gulp.series('html', 'fa-min', 'js', 'critical', 'css', 'deploy'))
+gulp.task('up', gulp.series('html', () => child.exec('make build'), 'fa-min', () => child.exec('make build'), 'js', 'css', 'critical', () => child.exec('make deploy') ))
 
 gulp.task('default', () => {
   gulp.watch('_pug/*.pug', gulp.series('html'))

@@ -19,7 +19,7 @@
           {% if author.web contains "://" %}
             <a class="text-dark h4" onclick="window.open('{{ author.web }}','_blank')">Sobre {{ author.name }}</a>
           {% else %}
-            <a class="text-dark h4" onclick="location.href='{{ author.web }}'">Sobre {{ author.name }}</a>
+            <a class="text-dark h4" onclick="location.href='{{ site.baseurl }}{{ author.web }}'">Sobre {{ author.name }}</a>
           {% endif %}
         {% else %}
           <a class="text-dark h4" onclick="location.href='{{ site.baseurl }}/autores#{% if page.author %}{{ page.author }}{% else %}{{ auth[0] }}{% endif %}'">Sobre {{ author.name }}</a>

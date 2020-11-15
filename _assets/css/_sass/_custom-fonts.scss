@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Alegreya-BoldItalic";
+    src: url("/assets/fonts/alegreya.eot");
+    src: url("/assets/fonts/alegreya.eot?#iefix") format("embedded-opentype"),
+         url("/assets/fonts/alegreya.woff2") format("woff2"),
+         url("/assets/fonts/alegreya.woff") format("woff"),
+         url("/assets/fonts/alegreya.ttf") format("ttf"),
+         url("/assets/fonts/alegreya.svg#Alegreya-BoldItalic") format("svg");
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "BrandonGrotesque-Black";
+    src: url("/assets/fonts/brandon.eot");
+    src: url("/assets/fonts/brandon.eot?#iefix") format("embedded-opentype"),
+         url("/assets/fonts/brandon.woff2") format("woff2"),
+         url("/assets/fonts/brandon.woff") format("woff"),
+         url("/assets/fonts/brandon.ttf") format("ttf"),
+         url("/assets/fonts/brandon.svg#BrandonGrotesque-Black") format("svg");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "DINNextLTPro-Regular";
+    src: url("/assets/fonts/din.eot");
+    src: url("/assets/fonts/din.eot?#iefix") format("embedded-opentype"),
+         url("/assets/fonts/din.woff2") format("woff2"),
+         url("/assets/fonts/din.woff") format("woff"),
+         url("/assets/fonts/din.ttf") format("ttf"),
+         url("/assets/fonts/din.svg#DINNextLTPro-Regular") format("svg");
+    font-style: normal;
+    font-weight: regular;
+    font-display: swap;
+}

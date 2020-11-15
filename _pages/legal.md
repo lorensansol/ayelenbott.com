@@ -1,15 +1,8 @@
 ---
 title: Aviso Legal
 description: ''
+toc: true
 ---
-
-Índice
-{:.h3.font-weight-bold.mb-0}
-
-- [Sus datos seguros](#datos-seguros)
-- [Política de protección de datos](#proteccion-datos)
-- [Política de cookies](#cookies)
-
 
 ## Sus datos seguros
 {:#datos-seguros}

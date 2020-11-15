@@ -8,9 +8,6 @@ img {
   max-width:100%;
   height:auto;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-weight:700;
-}
 .bigradius {
   border-radius: 40px;
 }
@@ -389,43 +386,6 @@ img, img:hover {
   line-height: 100% !important;
 }
 
-// search
-.show-search {
-  cursor:pointer;
-  &:hover {
-      color: darken($primary,$percentage-darken-primary);
-  }
-}
-.modal-open .modal {
-  background: rgba(0,0,0,0.3);
-}
-.lunrsearchresult {
-  .title {
-      color:#000;
-      font-weight:700;
-      line-height:1.2;
-      display:block;
-      font-size:20px;
-      margin-bottom:5px;
-      &:hover {
-          color: darken($primary,$percentage-darken-primary);
-      }
-  }
-  span.body {
-      color: $gray-500;
-      line-height:1.7;
-      display:block;
-      margin-bottom:10px;
-  }
-  a {
-      &:hover {
-          text-decoration:none;
-      }
-  }
-  span.url {
-       display:none;
-  }
-}
 // footer
 .footer {
   font-size:15px;

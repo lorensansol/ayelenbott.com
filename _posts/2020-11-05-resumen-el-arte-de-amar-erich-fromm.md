@@ -1,5 +1,6 @@
 ---
 title: "Resumen del Libro 'El arte de amar' de Erich Fromm"
+title_seo: "🥇 Resumen del Libro 'El arte de amar' 【 de Erich Fromm 】"
 description: "¿Es el amor un arte? En tal caso, requiere conocimiento y esfuerzo. ¿O es el amor una sensación placentera, cuya experiencia es una..."
 categories: ["Resúmenes de Libros"]
 image: /assets/img/arte-amar.svg

@@ -1,44 +1,44 @@
-@font-face {
-  font-family: 'Alegreya';
-  src: url('/assets/fonts/alegreya.eot');
-  src: url('/assets/fonts/alegreya.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/alegreya.otf') format('otf'),
-       url('/assets/fonts/alegreya.woff2') format('woff2'),
-       url('/assets/fonts/alegreya.woff') format('woff'),
-       url('/assets/fonts/alegreya.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Brandon';
-  src: url('/assets/fonts/brandon.eot');
-  src: url('/assets/fonts/brandon.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/brandon.otf') format('otf'),
-       url('/assets/fonts/brandon.woff2') format('woff2'),
-       url('/assets/fonts/brandon.woff') format('woff'),
-       url('/assets/fonts/brandon.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Din';
-  src: url('/assets/fonts/din.eot');
-  src: url('/assets/fonts/din.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/din.otf') format('otf'),
-       url('/assets/fonts/din.woff2') format('woff2'),
-       url('/assets/fonts/din.woff') format('woff'),
-       url('/assets/fonts/din.ttf') format('truetype'),
-       url('/assets/fonts/din.svg#DIN Next LT Pro Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Alegreya';
+//   src: url('/assets/fonts/alegreya.eot');
+//   src: url('/assets/fonts/alegreya.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/fonts/alegreya.otf') format('otf'),
+//        url('/assets/fonts/alegreya.woff2') format('woff2'),
+//        url('/assets/fonts/alegreya.woff') format('woff'),
+//        url('/assets/fonts/alegreya.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Brandon';
+//   src: url('/assets/fonts/brandon.eot');
+//   src: url('/assets/fonts/brandon.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/fonts/brandon.otf') format('otf'),
+//        url('/assets/fonts/brandon.woff2') format('woff2'),
+//        url('/assets/fonts/brandon.woff') format('woff'),
+//        url('/assets/fonts/brandon.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Din';
+//   src: url('/assets/fonts/din.eot');
+//   src: url('/assets/fonts/din.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/fonts/din.otf') format('otf'),
+//        url('/assets/fonts/din.woff2') format('woff2'),
+//        url('/assets/fonts/din.woff') format('woff'),
+//        url('/assets/fonts/din.ttf') format('truetype'),
+//        url('/assets/fonts/din.svg#DIN Next LT Pro Regular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
 
 // Headers weight
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: 700;
+  font-weight: $headings-font-family-style;
 }
 
 // Headers blog colors
@@ -50,8 +50,8 @@ h1, h2, h3, h4, h5, h6,
 // Leads (subtitles)
 .lead {
   font-family: $leads-font-family;
-  font-weight: bold;
-  font-style: italic;
+  font-weight: $leads-font-family-weight;
+  font-style: $leads-font-family-style;
   @include font-size(2rem);
   line-height: 1;
   margin-bottom: 2rem;
@@ -94,6 +94,9 @@ b, strong {
     border-color: rgba($black, .35) !important;
     box-shadow: inherit !important;
   }
+  &:active {
+    border-width: .375rem 0 0;
+  }
   &[class*="outline"] {
     // border-color: $light !important;
     border-width: 1px 1px .25rem;
@@ -104,6 +107,9 @@ b, strong {
     }
     &:focus {
       border-color: rgba($black, .35) !important;
+    }
+    &:active {
+      border-width: .375rem 1px 1px;
     }
   }
 }
@@ -137,7 +143,7 @@ span[onclick]:not(.btn):hover {
 }
 .badge {
   @extend .badge-pill;
-  font-weight: normal;
+  font-weight: $font-family-sans-serif-style;
 }
 
 // Code > pre rounded
@@ -223,7 +229,7 @@ span[onclick]:not(.btn):hover {
   em {
     color: $primary;
     // color: lighten($primary, 20%);
-    font-style: normal;
+    font-style: $font-family-sans-serif-style;
   }
   h2, h3, h4, h5, h6 {
     margin: 3rem 0 1rem;

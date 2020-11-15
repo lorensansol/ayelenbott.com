@@ -22,7 +22,6 @@
     "gulp-postcss": "*",
     "gulp-pug": "*",
     "gulp-purgecss": "*",
-    "gulp-run-command": "*",
     "gulp-terser": "*",
     "prismjs": "*"
   },

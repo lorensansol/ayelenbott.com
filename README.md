@@ -115,15 +115,15 @@ Deploy with date now
 
 ```bash
 # deploy with date now
-git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
+git add .;git commit -m "Update: `date +'%Y-%m-%d %H:%M:%S'`";git push
 ```
 
 ## FALTA
 
-- fonts dirs
+- deploy
+- smooth scroll in onclick links
 - probar tareas gulp
 - bg-bott
-
 - fa en sprite min
 - data-showup escalonado
 - estilos if varios autores

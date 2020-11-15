@@ -63,7 +63,7 @@
           <span class="text-muted d-inline d-md-none">Diseño Web</span>
           <br class="d-inline d-md-none">
           {% if page.url == '/' %}
-            <a href="https://seacomoseo.com/diseno-paginas-web" target="_blank">seacomoseo.com</a>
+            <a href="https://seacomoseo.com/" target="_blank">seacomoseo.com</a>
           {% else %}
           <span onclick="window.open('https://seacomoseo.com/diseno-paginas-web','_blank')">seacomoseo.com</span>
           {% endif %}
@@ -79,3 +79,19 @@
 
 <!-- Scripts (without bootstrap.js) -->
 <script src="{{ site.baseurl }}/{% if jekyll.environment != "production" %}_{% endif %}assets/js/scripts.js" assync></script>
+
+<!-- Correct interal links (and onclick=location.href) in html files without active server -->
+{% if jekyll.environment != "production" and site.baseurl != '' %}
+  <script>
+    document.querySelectorAll('a[href^="file://"]').forEach(link => {
+      link.pathname.slice(-1) == '/' ? ext = 'index.html' : ext = '.html'
+      link.href = link.pathname + ext + link.hash
+    })
+    document.querySelectorAll('[onclick^="location.href=\'file://"]').forEach(link => {
+      let linkParts = link.getAttribute('onclick').replace(/^location.href\='|'$/g, '').split('#')
+      linkParts[0].slice(-1) == '/' ? ext = 'index.html' : ext = '.html'
+      linkParts[1] ? linkParts[1] = '#' + linkParts[1] : linkParts[1] = ''
+      link.setAttribute('onclick', 'location.href="' + linkParts[0] + ext + linkParts[1] + '"' )
+    })
+  </script>
+{% endif %}
