@@ -1,10 +1,10 @@
 const icons = {% include_relative _includes/fa-used.json %};
 const faElements = document.querySelectorAll('i[class*="fa-"]')
-faElements && faElements.forEach(i => {
+icons && faElements && faElements.forEach(i => {
   // get icon name
   const faIconName = i.classList.value.match(/fa-(\w|-){3,}/g).toString().replace('fa-', '')
   // if exist in the json/svg list
-  if(icons && icons[faIconName]) {
+  if(icons[faIconName]) {
     // change main fa class name
     i.classList.add('svg-inline--fa')
     // save all classes + add fa width class

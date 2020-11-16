@@ -33,7 +33,7 @@ gulp.task('html', () => {
 
 gulp.task('js', () => {
   return gulp
-    .src('_site/_assets/js/smooth-scroll.js')
+    .src('_site/_assets/js/scripts.js')
     .pipe(babel({minified: true, comments: false}))
     .pipe(terser())
     .pipe(gulp.dest('assets/js'))
@@ -127,9 +127,9 @@ gulp.task('gfonts', gulp.series(
 gulp.task('rest', () => {
   return gulp
     .src([
-      '_site/_assets/js/lunr.js',
-      '_site/_assets/js/lunrsearchengine.js',
-      '_site/_assets/js/smooth-scroll.js',
+      '_assets/js/lunr.js',
+      '_assets/js/lunrsearchengine.js',
+      '_assets/js/smooth-scroll.js',
     ])
     .pipe(gulp.dest('assets/js'))
 })

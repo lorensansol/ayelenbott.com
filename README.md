@@ -120,7 +120,6 @@ git add .;git commit -m "Update: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
-- probar tareas gulp
 - smooth scroll in onclick links
 - bg-bott
 - fa en sprite min
