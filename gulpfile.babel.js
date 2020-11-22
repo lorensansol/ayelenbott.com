@@ -140,7 +140,7 @@ gulp.task('all', gulp.series('img', 'fonts', 'gfonts', 'rest', 'html', 'fa-min',
 
 gulp.task('jcc', gulp.series('js', 'css', 'critical'))
 
-gulp.task('up', gulp.series('html', 'build', 'fa-min', 'build', 'js', 'css', 'critical', () => child.exec('make deploy') ))
+gulp.task('buildandup', gulp.series('html', 'build', 'fa-min', 'build', 'js', 'css', 'critical', () => child.exec('make up') ))
 
 gulp.task('default', () => {
   gulp.watch('_pug/*.pug', gulp.series('html'))

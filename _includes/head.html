@@ -7,10 +7,12 @@
   <!-- Title -->
   {% if paginator.page > 1 %}
     <title>Página {{paginator.page}} de {{paginator.total_pages}} | {{ site.title }}</title>
-  {% else if page.title_seo %}
-    <title>{{ page.title_seo }}</title>
   {% else %}
-    <title>{{ page.title }}</title>
+    {% if page.title_seo %}
+      <title>{{ page.title_seo }}</title>
+    {% else %}
+      <title>{{ page.title }}</title>
+    {% endif %}
   {% endif %}
 
   <!-- SEO tags without title -->

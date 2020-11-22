@@ -19,26 +19,26 @@ server:
 server-production:
 	JEKYLL_ENV=production bundle exec jekyll serve --watch
 
-# deploy with date now
-deploy:
+# upload with date now
+up:
 	git add . ;\
 	git commit -m "Update: `date +\'%Y-%m-%d %H:%M:%S\'`" ;\
 	git push
 
-# on server runing, create production resources and deploy
-onserverup:
+# on server runing, create production resources and upload
+deploy:
 	make fa-min ;\
 	gulp jcc ;\
-	make deploy
+	make up
 
-# build and deploy
-up:
+# build and up
+bauildandup:
 	gulp html ;\
 	make build ;\
 	make fa-min ;\
 	make build ;\
 	gulp jcc ;\
-	make deploy
+	make up
 
 #	create an optimal used-icons.json with all the fontawesome used icons
 #		used fa icons
