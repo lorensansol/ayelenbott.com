@@ -120,6 +120,9 @@ git add .;git commit -m "Update: `date +'%Y-%m-%d %H:%M:%S'`";git push
 
 ## FALTA
 
+- Enlace reseñas de Google testimonios
+  - Vídeo en Ficha Google My Business
+
 - smooth scroll in onclick links
 - bg-bott
 - fa en sprite min

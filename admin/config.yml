@@ -1,0 +1,23 @@
+backend:
+  name: test-repo
+  branch: master # Branch to update (optional; defaults to master)
+  repo: lorensansol/ayelenbott.com
+media_folder: "assets/img" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Título SEO", name: "title_seo", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías", label_singular: "Añadir", min: 1}
+      - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}"}
+      - {label: "Imagen principal", name: "image", widget: "image"}
+      - {label: "Índice", name: "toc", widget: "boolean", default: false}
+      - {label: "Publicar", name: "published", widget: "boolean", default: false}
+      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", required: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Body", name: "body", widget: "markdown"}
