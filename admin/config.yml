@@ -1,11 +1,11 @@
 backend:
   name: github
-  branch: master # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
   repo: lorensansol/ayelenbott.com
   site_domain: practical-haibt-539235.netlify.com
 media_folder: "assets/img" # Media files will be stored in the repo under images/uploads
 public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
-site_url: /
+site_url: https://ayelenbott.com
 logo_url: /assets/img/logo.png
 locale: 'es'
 show_preview_links: false
@@ -21,7 +21,7 @@ collections:
       - {label: "Descripción", name: "description", widget: "text", hint: "70 < Caracteres < 155 (135) llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"}
       - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías", label_singular: "Añadir", min: 1}
       - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}", required: false}
-      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho. Editor online: https://pixlr.com/es/",required: false}
+      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho. Editor online: <a href='https://pixlr.com/es/'>pixlr.com</a>. Compresor online: <a href='https://kraken.io/web-interface'>kraken.io</a>.", required: false}
       - {label: "Índice", name: "toc", widget: "boolean", hint: "Creado automáticamente mediante subencabezados", default: false}
       - {label: "Publicar", name: "published", widget: "boolean", default: false}
       - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: "{{year}}-{{month}}-{{day}}", required: true}
