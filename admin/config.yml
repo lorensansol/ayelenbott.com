@@ -25,7 +25,7 @@ collections:
       - label: Título SEO
         name: title_seo
         widget: string
-        hint: "40 < Caracteres < 65 (60) · 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›"
+        hint: "40 < Caracteres < 65 (~60) · 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›"
         required: false
       - label: Slug
         name: slug
@@ -37,7 +37,7 @@ collections:
       - label: Descripción
         name: description
         widget: text
-        hint: "70 < Caracteres < 155 (135) · llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"
+        hint: "70 < Caracteres < 155 (~135) · llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"
       - label: Categorías
         name: categories
         widget: list
