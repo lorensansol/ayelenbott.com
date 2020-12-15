@@ -18,8 +18,8 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.date}}-{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: "{{fields.slug}}"
-    summary: "{{date}} {{last_modified_at}} · {{title}}"
-    sortable_fields: ['commit_date', 'date', 'last_modified_at', 'title']
+    summary: "{{date}} · {{title}}"
+    sortable_fields: ['date', 'last_modified_at', 'commit_date', 'title']
     view_filters:
       - label: Publicados
         field: published
@@ -61,19 +61,14 @@ collections:
         name: categories
         widget: list
         hint: Indica una o varias categorías separadas por coma y espacio
-        label_singular: Añadir
         min: 1
-      # - label: Categorías2
-        # name: categories2
-        # widget: relation
-        # collection: posts
-        # search_fields: ["categories.*"]
-        # value_field: "categories.*"
-        # required: false
       - label: Imagen principal
         name: image
         widget: image
         hint: "Nombre de archivo con mismo formato que 'slug' · Máximo 700 pixeles de ancho · Editor online: pixlr.com · Compresor online: kraken.io"
+        encoding: ascii
+        clean_accents: true
+        sanitize_replacement: "-"
         required: false
       - label: Índice
         name: toc

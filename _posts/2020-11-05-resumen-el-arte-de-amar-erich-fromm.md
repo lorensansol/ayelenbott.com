@@ -6,6 +6,7 @@ categories: ["Resúmenes de Libros"]
 image: /assets/img/arte-amar.svg
 toc: true
 published: true
+date: 2020-11-05
 last_modified_at: false
 ---
 
