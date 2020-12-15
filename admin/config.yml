@@ -12,13 +12,13 @@ locale: es
 # show_preview_links: false
 collections:
   - name: posts # Used in routes, e.g., /admin/collections/blog
-    identifier_field: fields.slug
-    summary: "{{title}} · {{date}}"
+    identifier_field: "{{fields.slug}}"
     label: Posts # Used in the UI
     folder: _posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.date}}-{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    preview_path: fields.slug
+    summary: "{{title}} · {{date}}"
+    preview_path: "{{fields.slug}}"
     fields: # The fields for each document, usually in front matter
       - label: Título
         name: title
