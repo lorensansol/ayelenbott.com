@@ -71,7 +71,6 @@ collections:
         format: YYYY-MM-DD
         date_format: YYYY-MM-DD
         time_format: false
-        required: true
       - label: Última modifiación
         name: last_modified_at
         widget: datetime
