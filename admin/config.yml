@@ -9,7 +9,7 @@ site_url: /
 display_url: https://ayelenbott.com
 logo_url: /assets/img/logo.png
 locale: es
-show_preview_links: false
+# show_preview_links: false
 collections:
   - name: posts # Used in routes, e.g., /admin/collections/blog
     identifier_field: slug
