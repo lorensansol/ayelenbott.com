@@ -17,12 +17,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Título", name: "title", widget: "string"}
-      - {label: "Título SEO", name: "title_seo", widget: "string"}
+      - {label: "Título SEO", name: "title_seo", widget: "string", required: false}
       - {label: "Descripción", name: "description", widget: "text"}
       - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías", label_singular: "Añadir", min: 1}
-      - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}"}
-      - {label: "Imagen principal", name: "image", widget: "image"}
+      # - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}"}
+      - {label: "Imagen principal", name: "image", widget: "image", required: false}
       - {label: "Índice", name: "toc", widget: "boolean", default: false}
       - {label: "Publicar", name: "published", widget: "boolean", default: false}
-      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", required: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false, default: false}
       - {label: "Body", name: "body", widget: "markdown"}
