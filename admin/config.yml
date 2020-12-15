@@ -2,8 +2,13 @@ backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
   repo: lorensansol/ayelenbott.com
+  site_domain: practical-haibt-539235.netlify.com
 media_folder: "assets/img" # Media files will be stored in the repo under images/uploads
 public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
+site_url: https://ayelenbott.com
+logo_url: https://ayelenbott.com/assets/img/logo.png
+locale: 'es'
+show_preview_links: false
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
