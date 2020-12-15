@@ -5,8 +5,8 @@ backend:
   site_domain: practical-haibt-539235.netlify.com
 media_folder: "assets/img" # Media files will be stored in the repo under images/uploads
 public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
-site_url: https://ayelenbott.com
-logo_url: https://ayelenbott.com/assets/img/logo.png
+site_url: /
+logo_url: /assets/img/logo.png
 locale: 'es'
 show_preview_links: false
 collections:
@@ -17,12 +17,13 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Título", name: "title", widget: "string"}
-      - {label: "Título SEO", name: "title_seo", widget: "string", required: false}
-      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Título SEO", name: "title_seo", widget: "string", hint: "40 < Caracteres < 65 (60) 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›", required: false}
+      - {label: "Descripción", name: "description", widget: "text", hint: "70 < Caracteres < 155 (135) llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"}
       - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías", label_singular: "Añadir", min: 1}
-      # - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}"}
-      - {label: "Imagen principal", name: "image", widget: "image", required: false}
-      - {label: "Índice", name: "toc", widget: "boolean", default: false}
+      - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}", required: false}
+      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho. Editor online: https://pixlr.com/es/",required: false}
+      - {label: "Índice", name: "toc", widget: "boolean", hint: "Creado automáticamente mediante subencabezados", default: false}
       - {label: "Publicar", name: "published", widget: "boolean", default: false}
-      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false, default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: "{{year}}-{{month}}-{{day}}", required: true}
+      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: false, required: false}
+      - {label: "Contenido", name: "body", widget: "markdown"}
