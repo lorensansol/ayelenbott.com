@@ -12,38 +12,32 @@ locale: es
 show_preview_links: false
 collections:
   - name: posts # Used in routes, e.g., /admin/collections/blog
-    identifier_field: url
+    identifier_field: slug
     label: Posts # Used in the UI
     folder: _posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{fields.date}}-{{fields.url}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{fields.date}}-{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - label: URL
-        name: url
+      - label: Slug
+        name: slug
         widget: string
-        hint: |
-          "Corto.
-          Descriptivo.
-          Sin palabras irrelevantes (de, por, para, el...)
-          En minúsculas.
-          Sin espacios (SI guiones medios).
-          Sin caracteres extraños (ni eñes ni barras bajas).
-          Ejemplo: 'paseo-nuevo-barrio'."
+        hint: "Corto · Descriptivo · Sin palabras irrelevantes (de, por, para, el...) · En minúsculas · Sin espacios (SI guiones medios) · Sin caracteres extraños (ni eñes ni barras bajas) · Ejemplo: 'paseo-nuevo-barrio'."
         encoding: ascii
         clean_accents: true
         sanitize_replacement: "-"
       - label: Título
         name: title
         widget: string
+        hint: Ejemplo: 'Día de paseo por el nuevo barrio'
       - label: Título SEO
         name: title_seo
         widget: string
-        hint: "40 < Caracteres < 65 (60) ; 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›"
+        hint: "40 < Caracteres < 65 (60) · 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›"
         required: false
       - label: Descripción
         name: description
         widget: text
-        hint: "70 < Caracteres < 155 (135) ; llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"
+        hint: "70 < Caracteres < 155 (135) · llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"
       - label: Categorías
         name: categories
         widget: list
@@ -60,7 +54,7 @@ collections:
       - label: Imagen principal
         name: image
         widget: image
-        hint: "Nombre de archivo con mismo formato que 'slug' ; Máximo 700 pixeles de ancho ; Editor online: pixlr.com ; Compresor online: kraken.io"
+        hint: "Nombre de archivo con mismo formato que 'slug' · Máximo 700 pixeles de ancho · Editor online: pixlr.com · Compresor online: kraken.io"
         required: false
       - label: Índice
         name: toc
