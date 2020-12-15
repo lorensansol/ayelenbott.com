@@ -16,22 +16,22 @@ collections:
     label: Posts # Used in the UI
     folder: _posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{fields.date}}-{{fields.url}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    # slug: "{{fields.date}}-{{fields.url}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - label: URL
-        name: url
-        widget: string
-        hint: |
-          "Corto.
-          Descriptivo.
-          Sin palabras irrelevantes (de, por, para, el...)
-          En minúsculas.
-          Sin espacios (SI guiones medios).
-          Sin caracteres extraños (ni eñes ni barras bajas).
-          Ejemplo: 'paseo-nuevo-barrio'."
-        encoding: ascii
-        clean_accents: true
-        sanitize_replacement: "-"
+      # - label: URL
+      #   name: url
+      #   widget: string
+      #   hint: |
+      #     "Corto.
+      #     Descriptivo.
+      #     Sin palabras irrelevantes (de, por, para, el...)
+      #     En minúsculas.
+      #     Sin espacios (SI guiones medios).
+      #     Sin caracteres extraños (ni eñes ni barras bajas).
+      #     Ejemplo: 'paseo-nuevo-barrio'."
+      #   encoding: ascii
+      #   clean_accents: true
+      #   sanitize_replacement: "-"
       - label: Título
         name: title
         widget: string
