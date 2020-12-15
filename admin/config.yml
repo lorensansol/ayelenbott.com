@@ -5,8 +5,9 @@ backend:
   site_domain: practical-haibt-539235.netlify.com
 media_folder: "assets/img" # Media files will be stored in the repo under images/uploads
 public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
-site_url: https://ayelenbott.com
-logo_url: /assets/img/logo.png
+site_url: /
+display_url: https://ayelenbott.com
+logo_url: /assets/img/logo-cuadrado.png
 locale: 'es'
 show_preview_links: false
 collections:
@@ -19,11 +20,11 @@ collections:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Título SEO", name: "title_seo", widget: "string", hint: "40 < Caracteres < 65 (60) 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›", required: false}
       - {label: "Descripción", name: "description", widget: "text", hint: "70 < Caracteres < 155 (135) llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"}
-      - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías", label_singular: "Añadir", min: 1}
-      - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "{{slug}}", required: false}
-      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho. Editor online: <a href='https://pixlr.com/es/'>pixlr.com</a>. Compresor online: <a href='https://kraken.io/web-interface'>kraken.io</a>.", required: false}
+      - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías separadas por coma + espacio", label_singular: "Añadir", min: 1}
+      - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "categories.*", required: false}
+      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho - Editor online: pixlr.com - Compresor online: kraken.io", required: false}
       - {label: "Índice", name: "toc", widget: "boolean", hint: "Creado automáticamente mediante subencabezados", default: false}
       - {label: "Publicar", name: "published", widget: "boolean", default: false}
-      - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: "{{year}}-{{month}}-{{day}}", required: true}
+      # - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: "{{year}}-{{month}}-{{day}}", required: true}
       - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: false, required: false}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - {label: "Contenido", name: "body", widget: "markdown", required: false}
