@@ -17,8 +17,25 @@ collections:
     folder: _posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.date}}-{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    summary: "Título: {{title}} · Fecha: {{date}} · Actualizado en: {{commit_date}}"
     preview_path: "{{fields.slug}}"
+    summary: "{{date}} {{last_modified_at}} · {{title}}"
+    sortable_fields: ['commit_date', 'date', 'last_modified_at', 'title']
+    view_filters:
+      - label: Publicados
+        field: published
+        pattern: true
+      - label: No Publicados
+        field: published
+        pattern: false
+    view_groups:
+      - label: Año
+        field: date
+        pattern: \d{4}
+      - label: Mes
+        field: date
+        pattern: \d{4}-\d{2}
+      - label: Publicados
+        field: published
     fields: # The fields for each document, usually in front matter
       - label: Título
         name: title
