@@ -12,20 +12,87 @@ locale: 'es'
 show_preview_links: false
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: "slug"
     label: "Posts" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{fields.date}}-{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Título SEO", name: "title_seo", widget: "string", hint: "40 < Caracteres < 65 (60) 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›", required: false}
-      - {label: "Descripción", name: "description", widget: "text", hint: "70 < Caracteres < 155 (135) llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"}
-      - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías separadas por coma + espacio", allow_add: true, label_singular: "Añadir"}
-      # - {label: "Categorías", name: "categories", widget: "list", hint: "Indica una o varias categorías separadas por coma + espacio", label_singular: "Añadir", min: 1}
-      # - {label: "Categorías2", name: "categories2", widget: "relation", collection: "posts", search_fields: ["categories.*"], value_field: "categories.*", required: false}
-      - {label: "Imagen principal", name: "image", widget: "image", hint: "Máximo 700 pixeles de ancho - Editor online: pixlr.com - Compresor online: kraken.io", required: false}
-      - {label: "Índice", name: "toc", widget: "boolean", hint: "Creado automáticamente mediante subencabezados", default: false}
-      - {label: "Publicar", name: "published", widget: "boolean", default: false}
-      - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: true}
-      - {label: "Última modifiación", name: "last_modified_at", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, default: false, required: false}
-      - {label: "Contenido", name: "body", widget: "markdown", required: false}
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        hint: |
+          "Corto.
+          Descriptivo.
+          Sin palabras irrelevantes (de, por, para, el...)
+          En minúsculas.
+          Sin espacios (SI guiones medios).
+          Sin caracteres extraños (ni eñes ni barras bajas).
+          Ejemplo: 'paseo-nuevo-barrio'."
+        encoding: "ascii"
+        clean_accents: true
+        sanitize_replacement: "-"
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Título SEO"
+        name: "title_seo"
+        widget: "string"
+        hint: "40 < Caracteres < 65 (60) 🥇 【】 ® © ▷ ᐅ ◁ ✆ ⊛ « » ‹ ›"
+        required: false
+      - label: "Descripción"
+        name: "description"
+        widget: "text"
+        hint: "70 < Caracteres < 155 (135) llll➤ ✅ ➕ ⚡ ✆ ® © ❤ ⬤ ✚ ➥ ✓ « » ‹ ›"
+      - label: "Categorías"
+        name: "categories"
+        widget: "list"
+        hint: "Indica una o varias categorías separadas por coma + espacio"
+        allow_add: true
+        label_singular: "Añadir"
+      # - label: "Categorías"
+        name: "categories"
+        widget: "list"
+        hint: "Indica una o varias categorías separadas por coma + espacio"
+        label_singular: "Añadir"
+        min: 1
+      # - label: "Categorías2"
+        # name: "categories2"
+        # widget: "relation"
+        # collection: "posts"
+        # search_fields: ["categories.*"]
+        # value_field: "categories.*"
+        # required: false
+      - label: "Imagen principal"
+        name: "image"
+        widget: "image"
+        hint: "Máximo 700 pixeles de ancho - Editor online: pixlr.com - Compresor online: kraken.io"
+        required: false
+      - label: "Índice"
+        name: "toc"
+        widget: "boolean"
+        hint: "Creado automáticamente mediante subencabezados"
+        default: false
+      - label: "Publicar"
+        name: "published"
+        widget: "boolean"
+        default: false
+      - label: "Fecha"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: true
+      - label: "Última modifiación"
+        name: "last_modified_at"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: false
+        required: false
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"
+        required: false
