@@ -28,7 +28,7 @@ collections:
       - label: Título
         name: title
         widget: string
-        hint: Ejemplo: 'Día de paseo por el nuevo barrio'
+        hint: "Ejemplo: 'Día de paseo por el nuevo barrio'"
       - label: Título SEO
         name: title_seo
         widget: string
