@@ -73,7 +73,6 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - google7467d923cbb3eb4c.html
   - node_modules
   - _pug
   - fonts.list

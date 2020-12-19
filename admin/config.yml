@@ -50,9 +50,6 @@ collections:
         name: slug
         widget: string
         hint: "Corto · Descriptivo · Sin palabras irrelevantes (de, por, para, el...) · En minúsculas · Sin espacios (SI guiones medios) · Sin caracteres extraños (ni eñes ni barras bajas) · Ejemplo: 'paseo-nuevo-barrio'."
-        encoding: ascii
-        clean_accents: true
-        sanitize_replacement: "-"
       - label: Descripción
         name: description
         widget: text
@@ -66,9 +63,6 @@ collections:
         name: image
         widget: image
         hint: "Nombre de archivo con mismo formato que 'slug' · Máximo 700 pixeles de ancho · Editor online: pixlr.com · Compresor online: kraken.io"
-        encoding: ascii
-        clean_accents: true
-        sanitize_replacement: "-"
         required: false
       - label: Índice
         name: toc
@@ -97,3 +91,7 @@ collections:
         name: body
         widget: markdown
         required: false
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
