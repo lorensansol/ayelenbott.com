@@ -122,6 +122,21 @@ defaults:
       path: 'blog/page'
     values:
       sitemap: false
+  - # google-site-verification file
+    scope:
+      path: 'google7467d923cbb3eb4c.html'
+    values:
+      sitemap: false
+  - # Netlify CMS admin
+    scope:
+      path: '/admin/'
+    values:
+      sitemap: false
+  - # PDF all files
+    scope:
+      path: '**/*.pdf'
+    values:
+      sitemap: false
 
 # Other
 highlighter: rouge
