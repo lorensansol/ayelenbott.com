@@ -129,7 +129,7 @@ defaults:
       sitemap: false
   - # Netlify CMS admin
     scope:
-      path: 'admin/'
+      path: 'admin/index.html'
     values:
       sitemap: false
   - # PDF all files
