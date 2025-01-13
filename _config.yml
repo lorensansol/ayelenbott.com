@@ -2,8 +2,8 @@
 name: 'Ayelén Bott'
 title: 'Ayelén Bott'
 description:
-url: https://ayelenbott.com
-baseurl: ''
+url: https://lorensansol.github.io # https://ayelenbott.com
+baseurl: '/ayelenbott.com'
 logo: /assets/img/logo.png
 favicon: /favico.ico
 google_analytics: G-DVLW394645
